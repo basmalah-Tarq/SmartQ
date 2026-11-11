@@ -1,0 +1,29 @@
+# SmartQ - Apache / InfinityFree settings
+
+Options -Indexes
+DirectoryIndex index.html index.php
+
+# Pass the Authorization header to PHP (shared hosts running PHP as CGI drop it otherwise).
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTP:Authorization} .
+    RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+</IfModule>
+<IfModule mod_setenvif.c>
+    SetEnvIf Authorization "(.*)" HTTP_AUTHORIZATION=$1
+</IfModule>
+
+# Never serve secrets, SQL dumps, notes or Docker files to the browser.
+<FilesMatch "(^config\.local.*\.php$|\.sql$|\.md$|\.log$|^Dockerfile$|^docker-compose\.yml$)">
+    Require all denied
+</FilesMatch>
+
+# Cache static assets.
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresByType text/css "access plus 7 days"
+    ExpiresByType application/javascript "access plus 7 days"
+    ExpiresByType image/png "access plus 30 days"
+    ExpiresByType image/jpeg "access plus 30 days"
+    ExpiresByType image/svg+xml "access plus 30 days"
+</IfModule>

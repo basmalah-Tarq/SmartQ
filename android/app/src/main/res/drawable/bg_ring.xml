@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Pulse ring around the onboarding map pin. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <solid android:color="#141F6FE0" />
+    <stroke android:width="2dp" android:color="#661F6FE0" />
+</shape>

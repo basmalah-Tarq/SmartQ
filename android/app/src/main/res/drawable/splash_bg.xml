@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash: brand gradient (navy -> blue -> teal) with two soft geometric discs. Same in dark. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="300" android:startColor="@color/navy_900" android:centerColor="@color/blue_600" android:endColor="@color/teal_500" />
+        </shape>
+    </item>
+    <item android:gravity="top|end" android:width="300dp" android:height="300dp" android:top="-110dp" android:end="-120dp">
+        <shape android:shape="oval">
+            <solid android:color="#0FFFFFFF" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|start" android:width="260dp" android:height="260dp" android:bottom="-90dp" android:start="-110dp">
+        <shape android:shape="oval">
+            <solid android:color="#0DFFFFFF" />
+        </shape>
+    </item>
+</layer-list>

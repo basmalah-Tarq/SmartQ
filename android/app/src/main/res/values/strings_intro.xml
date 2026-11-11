@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash, first-launch language picker, onboarding and welcome. -->
+<resources>
+    <!-- splash -->
+    <string name="splash_connecting">Connecting to SmartQ…</string>
+    <string name="splash_slow">Still connecting, hang on…</string>
+    <string name="splash_server">Server: %s</string>
+    <string name="splash_your_number">Your number</string>
+    <string name="splash_queue_sample" translatable="false">Q-007</string>
+
+    <!-- language picker (shown before a language is chosen, so the names stay in their own language) -->
+    <string name="lang_title">Choose your language</string>
+    <string name="lang_subtitle">You can change it any time from your profile.</string>
+    <string name="lang_bilingual" translatable="false">Language · اللغة</string>
+    <string name="lang_en_letter" translatable="false">A</string>
+    <string name="lang_en_name" translatable="false">English</string>
+    <string name="lang_en_line" translatable="false">Continue in English</string>
+    <string name="lang_ar_letter" translatable="false">ع</string>
+    <string name="lang_ar_name" translatable="false">العربية</string>
+    <string name="lang_ar_line" translatable="false">المتابعة بالعربية</string>
+    <string name="lang_use_phone">Use phone language</string>
+    <string name="lang_suggested">Phone language</string>
+
+    <!-- onboarding -->
+    <string name="onb_step">%1$s of %2$s</string>
+    <string name="onb_title_1">Find a place near you</string>
+    <string name="onb_body_1">Clinics, banks, salons and more. See who is open today.</string>
+    <string name="onb_title_2">Pick your exact time</string>
+    <string name="onb_body_2">Choose a free time that suits you. No calls, no waiting lists.</string>
+    <string name="onb_title_3">Arrive right on your turn</string>
+    <string name="onb_body_3">Your live ticket shows who is being served, so you walk in on time.</string>
+    <string name="onb_get_started">Get started</string>
+    <string name="onb_art_search">Search clinics, banks…</string>
+    <string name="onb_art_nearby">Open near you</string>
+    <string name="onb_art_free">Free times</string>
+    <string name="onb_art_yours">Yours: %s</string>
+    <string name="onb_art_your_turn">Your turn</string>
+    <string name="onb_art_place">City Clinic</string>
+    <string name="onb_art_now_serving">Now serving</string>
+    <string name="onb_art_next">You\'re next</string>
+    <string name="onb_art_turn_now">It\'s your turn!</string>
+    <string name="onb_art_no_wait">No waiting room</string>
+
+    <!-- welcome -->
+    <string name="welcome_title">Your turn, without the wait</string>
+    <string name="welcome_subtitle">Book a time at clinics, banks and salons, then arrive right when it\'s your turn.</string>
+    <string name="welcome_guest">Browse as guest</string>
+    <string name="welcome_have_password">Have a password?</string>
+    <string name="welcome_new">New to SmartQ?</string>
+    <string name="welcome_create_account">Create an account</string>
+    <string name="welcome_your_turn">Your turn</string>
+    <string name="welcome_now_serving">Now serving</string>
+    <string name="welcome_sample_place">City Clinic</string>
+    <string name="welcome_sample_line" translatable="false">%1$s · %2$s</string>
+</resources>

@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Sign-in, booking, bookings list and profile screens. %s placeholders get Western digits / LTR-isolated codes. -->
+<resources>
+    <!-- ===== Email code sign-in ===== -->
+    <string name="auth_step_1">Step 1 of 2</string>
+    <string name="auth_step_2">Step 2 of 2</string>
+    <string name="auth_email_title">What\'s your email?</string>
+    <string name="auth_email_subtitle">We\'ll send you a 6-digit code. No password needed — new here? We\'ll set up your account.</string>
+    <string name="auth_email_hint">Email address</string>
+    <string name="auth_send_code">Send code</string>
+    <string name="auth_email_trust">We only use your email to sign you in and send your bookings.</string>
+    <string name="auth_code_title">Check your email</string>
+    <string name="auth_code_title_new">Welcome! Check your email</string>
+    <string name="auth_code_subtitle">Enter the 6-digit code we sent to</string>
+    <string name="auth_change">Change</string>
+    <string name="auth_paste_code">Paste code</string>
+    <string name="auth_resend_code">Resend code</string>
+    <string name="auth_resend_in">Resend in %s</string>
+    <string name="auth_sending">Sending…</string>
+    <string name="auth_name_optional">Your name (optional)</string>
+    <string name="auth_name_helper">So places know who\'s arriving. You can add it later.</string>
+    <string name="auth_create_my_account">Create my account</string>
+    <string name="auth_continue">Continue</string>
+    <string name="auth_code_hint">Can\'t find it? Check your spam or promotions folder.</string>
+    <string name="auth_no_code_clipboard">No 6-digit code found on the clipboard.</string>
+    <string name="auth_new_code_sent">New code sent to %s</string>
+    <string name="auth_invalid_email">Enter a valid email address</string>
+    <string name="auth_code_cd">6-digit code</string>
+
+    <!-- ===== Password login ===== -->
+    <string name="auth_login_title">Welcome back</string>
+    <string name="auth_login_subtitle">Log in to book your turn and skip the line.</string>
+    <string name="auth_sign_in_heading">Sign in</string>
+    <string name="auth_email">Email</string>
+    <string name="auth_password">Password</string>
+    <string name="auth_log_in">Log in</string>
+    <string name="auth_new_to">New to SmartQ?</string>
+    <string name="auth_create_account_link">Create an account</string>
+    <string name="auth_brand_line">Intelligent Booking &amp; Solutions</string>
+    <string name="auth_enter_password">Enter your password</string>
+    <string name="auth_login_failed">Login failed. Please try again.</string>
+
+    <!-- ===== Register ===== -->
+    <string name="auth_register_title">Create your account</string>
+    <string name="auth_register_subtitle">It takes less than a minute. Then book your turn anywhere.</string>
+    <string name="auth_full_name">Full name</string>
+    <string name="auth_phone_optional">Phone (optional)</string>
+    <string name="auth_birth_optional">Birth date (optional)</string>
+    <string name="auth_password_min">Password (min. 6 characters)</string>
+    <string name="auth_confirm_password">Confirm password</string>
+    <string name="auth_create_account">Create account</string>
+    <string name="auth_have_account">Already have an account?</string>
+    <string name="auth_birth_date">Birth date</string>
+    <string name="auth_enter_full_name">Enter your full name</string>
+    <string name="auth_min_6">At least 6 characters</string>
+    <string name="auth_passwords_mismatch">Passwords do not match</string>
+    <string name="auth_created_login">Your account was created. Please log in.</string>
+
+    <!-- ===== Booking: pick a time ===== -->
+    <string name="book_title">Choose a time</string>
+    <string name="book_step">Step 2 of 3 · Pick your exact turn</string>
+    <string name="book_available_times">Available times</string>
+    <string name="book_help_choose">Help me choose</string>
+    <string name="book_help_choose_cd">Help me choose a time</string>
+    <string name="book_legend_free">Free</string>
+    <string name="book_legend_selected">Selected</string>
+    <string name="book_legend_booked">Booked / passed</string>
+    <string name="book_your_details">Your details</string>
+    <string name="book_phone">Phone</string>
+    <string name="book_age_optional">Age (optional)</string>
+    <string name="book_notes_optional">Notes for the place (optional)</string>
+    <string name="book_your_turn">Your turn</string>
+    <string name="book_pick_time">Pick a time</string>
+    <string name="book_tap_free_time">Tap a free time above</string>
+    <string name="book_confirm_booking">Confirm booking</string>
+    <string name="book_add_name">Tap to add your name</string>
+    <string name="book_open_hours">Open %1$s · %2$s min per turn</string>
+    <plurals name="book_free_slots">
+        <item quantity="one">%s free</item>
+        <item quantity="other">%s free</item>
+    </plurals>
+    <string name="book_day_full_title">This day is fully booked</string>
+    <string name="book_day_full_msg">Every turn on this day is taken or has passed. Please choose another day.</string>
+    <string name="book_choose_another_day">Choose another day</string>
+    <string name="book_no_free_left">No free time left on this day.</string>
+    <string name="book_picked_for_you">SmartQ picked %s for you: an early, less crowded time.</string>
+    <string name="book_sign_in_for">Sign in to book %s</string>
+    <string name="book_sign_in_msg">It only takes a few seconds. Then we\'ll bring you right back here to confirm your turn.</string>
+    <string name="book_name_required">Your name is required</string>
+    <string name="book_confirm_title">Confirm your booking</string>
+    <string name="book_confirm_msg">%1$s\n%2$s · %3$s\n\nYou can cancel later from My bookings.</string>
+    <string name="book_failed_title">Couldn\'t book this time</string>
+    <string name="book_pick_another">Pick another time</string>
+    <string name="book_slot_selected">Selected</string>
+    <string name="book_slot_free">Free</string>
+    <string name="book_slot_passed">Passed</string>
+    <string name="book_slot_full">Full</string>
+    <string name="book_slot_booked">Booked</string>
+
+    <!-- ===== Booking success ===== -->
+    <string name="success_queue_placeholder" translatable="false">Q-000</string>
+    <string name="success_title">You\'re booked!</string>
+    <string name="success_subtitle">Show this ticket at the desk when you arrive. We\'ll email you a reminder too.</string>
+    <string name="success_queue_number">Your queue number</string>
+    <string name="success_date">Date</string>
+    <string name="success_time">Time</string>
+    <string name="success_status">Status</string>
+    <string name="success_view_bookings">View my bookings</string>
+    <string name="success_back_home">Back to home</string>
+    <string name="success_reminder_title">Your turn is in 1 hour</string>
+    <string name="success_reminder_msg">%1$s at %2$s · %3$s</string>
+    <string name="success_reminder_info">We\'ll also remind you on this phone an hour before your turn.</string>
+
+    <!-- ===== My bookings ===== -->
+    <string name="appt_title">My bookings</string>
+    <string name="appt_subtitle">Your turns, all in one place.</string>
+    <string name="appt_tab_upcoming">Upcoming</string>
+    <string name="appt_tab_past">Past</string>
+    <string name="appt_tab_count">%1$s (%2$s)</string>
+    <string name="appt_none_upcoming">No upcoming turns — book one in seconds.</string>
+    <plurals name="appt_upcoming_count">
+        <item quantity="one">You have %s upcoming turn.</item>
+        <item quantity="other">You have %s upcoming turns.</item>
+    </plurals>
+    <string name="appt_empty_upcoming_title">No upcoming bookings</string>
+    <string name="appt_empty_upcoming_msg">When you book a turn it shows up here with your queue number.</string>
+    <string name="appt_find_place">Find a place</string>
+    <string name="appt_empty_past_title">No past visits yet</string>
+    <string name="appt_empty_past_msg">Completed and cancelled bookings will appear here.</string>
+    <string name="appt_cancel_title">Cancel this booking?</string>
+    <string name="appt_cancel_msg">%1$s · %2$s\n%3$s · %4$s\n\nYour turn will be released to someone else. This can\'t be undone.</string>
+    <string name="appt_keep">Keep it</string>
+    <string name="appt_cancel_booking">Cancel booking</string>
+    <string name="appt_cancelled">Booking %s cancelled.</string>
+    <string name="appt_cancel_failed">Couldn\'t cancel</string>
+    <string name="appt_queue">Queue no.</string>
+
+    <!-- ===== Profile ===== -->
+    <string name="profile_personal">Personal details</string>
+    <string name="profile_full_name">Full name</string>
+    <string name="profile_email">Email</string>
+    <string name="profile_phone">Phone</string>
+    <string name="profile_birth_date">Birth date</string>
+    <string name="profile_save">Save changes</string>
+    <string name="profile_change_photo">Change photo</string>
+    <string name="profile_settings">Settings</string>
+    <string name="profile_account">Account</string>
+    <string name="profile_my_bookings">My bookings</string>
+    <string name="profile_my_bookings_sub">Upcoming and past turns</string>
+    <string name="profile_log_out">Log out</string>
+    <string name="profile_version">SmartQ v%1$s · %2$s</string>
+    <string name="profile_saved">Profile saved.</string>
+    <string name="profile_image_read">Could not read this image. Please choose another one.</string>
+    <string name="profile_photo_updated">Photo updated.</string>
+    <string name="profile_logout_title">Log out?</string>
+    <string name="profile_logout_msg">You can sign back in any time with your email.</string>
+    <string name="profile_stay">Stay</string>
+</resources>

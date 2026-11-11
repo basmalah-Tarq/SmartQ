@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- First launch: choose English / العربية before the onboarding. -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    android:fillViewport="true"
+    tools:context=".LanguageActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- brand header -->
+        <LinearLayout
+            android:id="@+id/hero"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_hero_welcome"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingStart="24dp"
+            android:paddingTop="40dp"
+            android:paddingEnd="24dp"
+            android:paddingBottom="40dp">
+
+            <FrameLayout
+                android:id="@+id/langPlate"
+                android:layout_width="88dp"
+                android:layout_height="88dp"
+                android:background="@drawable/splash_plate"
+                android:elevation="8dp">
+
+                <ImageView
+                    android:layout_width="34dp"
+                    android:layout_height="54dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/brand_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_mark" />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/langBilingual"
+                style="@style/Text.Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="@string/lang_bilingual"
+                android:textAllCaps="false"
+                android:textColor="@color/white_80"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/langTitle"
+                style="@style/Text.H1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/lang_title"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/langSubtitle"
+                style="@style/Text.Body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:gravity="center"
+                android:text="@string/lang_subtitle"
+                android:textColor="@color/white_80" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/cards"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-24dp"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardEnglish"
+                style="@style/Widget.SmartQ.Card.Clickable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/accent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="96dp"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_icon_tile"
+                        android:backgroundTint="@color/blue_tint"
+                        android:fontFamily="@font/jakarta_extrabold"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/lang_en_letter"
+                        android:textColor="@color/accent"
+                        android:textSize="24sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.H2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lang_en_name"
+                            android:textDirection="ltr" />
+
+                        <TextView
+                            style="@style/Text.Muted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/lang_en_line"
+                            android:textDirection="ltr" />
+
+                        <TextView
+                            android:id="@+id/suggestEnglish"
+                            style="@style/Text.Pill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/teal_tint"
+                            android:text="@string/lang_suggested"
+                            android:textColor="@color/teal_500"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/muted" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardArabic"
+                style="@style/Widget.SmartQ.Card.Clickable"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                app:cardElevation="4dp"
+                app:strokeColor="@color/accent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minHeight="96dp"
+                    android:orientation="horizontal"
+                    android:padding="18dp">
+
+                    <TextView
+                        android:layout_width="56dp"
+                        android:layout_height="56dp"
+                        android:background="@drawable/bg_icon_tile"
+                        android:backgroundTint="@color/teal_tint"
+                        android:fontFamily="@font/jakarta_extrabold"
+                        android:gravity="center"
+                        android:importantForAccessibility="no"
+                        android:text="@string/lang_ar_letter"
+                        android:textColor="@color/teal_500"
+                        android:textSize="26sp" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="16dp"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            style="@style/Text.H2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/lang_ar_name"
+                            android:textDirection="rtl" />
+
+                        <TextView
+                            style="@style/Text.Muted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="2dp"
+                            android:text="@string/lang_ar_line"
+                            android:textDirection="rtl" />
+
+                        <TextView
+                            android:id="@+id/suggestArabic"
+                            style="@style/Text.Pill"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:backgroundTint="@color/teal_tint"
+                            android:text="@string/lang_suggested"
+                            android:textColor="@color/teal_500"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="8dp"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_chevron_right"
+                        app:tint="@color/muted" />
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnPhoneLanguage"
+                style="@style/Widget.SmartQ.Button.Text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="16dp"
+                android:minHeight="48dp"
+                android:text="@string/lang_use_phone"
+                app:icon="@drawable/ic_language"
+                app:iconSize="18dp"
+                app:iconTint="@color/accent" />
+        </LinearLayout>
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:minHeight="24dp" />
+    </LinearLayout>
+</ScrollView>

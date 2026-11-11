@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- RELEASE builds whose API base URL is plain http:// (selected automatically by app/build.gradle.kts). -->
+<network-security-config xmlns:tools="http://schemas.android.com/tools" tools:ignore="UnusedResources">
+    <base-config cleartextTrafficPermitted="true">
+        <trust-anchors>
+            <certificates src="system" />
+        </trust-anchors>
+    </base-config>
+</network-security-config>

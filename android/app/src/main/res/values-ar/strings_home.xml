@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== الرئيسية ===== -->
+    <string name="home_greeting">%s،</string>
+    <string name="home_guest_name">زائر</string>
+    <string name="home_guest_initial">ز</string>
+    <string name="home_cd_profile">افتح حسابك</string>
+    <string name="home_intro_title">احجز دورك.\nوفّر وقت الانتظار.</string>
+    <string name="home_intro_body">عيادات وبنوك وصالونات وأكثر، في مكان واحد.</string>
+    <string name="home_search_hint">ابحث عن عيادة، بنك، صالون…</string>
+    <string name="home_find">بحث</string>
+
+    <string name="home_next_turn">دورك القادم</string>
+    <string name="home_today_badge">اليوم</string>
+    <string name="home_starts">يبدأ</string>
+    <string name="home_date">التاريخ</string>
+    <string name="home_time">الوقت</string>
+    <string name="home_ticket_cd">دورك القادم %1$s في %2$s، %3$s %4$s. افتح حجوزاتك.</string>
+
+    <string name="home_guest_title">رقم دورك سيظهر هنا</string>
+    <string name="home_guest_message">تصفّح الأماكن بحرية، وسجّل الدخول عندما تكون جاهزًا للحجز ومتابعة رقم دورك مباشرةً.</string>
+    <string name="home_browse_places">تصفّح الأماكن</string>
+    <string name="home_empty_title">لا توجد حجوزات قادمة</string>
+    <string name="home_empty_message">اختر مكانًا واحجز دورك خلال ثوانٍ.</string>
+    <string name="home_error_title">تعذّر تحميل دورك</string>
+
+    <string name="home_stat_upcoming">القادمة</string>
+    <string name="home_stat_done">المكتملة</string>
+    <string name="home_stat_total">كل الحجوزات</string>
+
+    <string name="home_upcoming_title">المواعيد القادمة</string>
+    <string name="home_see_all">عرض الكل</string>
+
+    <string name="home_quick_title">إجراءات سريعة</string>
+    <string name="home_qa_book">احجز دورًا</string>
+    <string name="home_qa_book_sub">ابحث عن مكان</string>
+    <string name="home_qa_bookings">حجوزاتي</string>
+    <string name="home_qa_bookings_sub">أدوارك القادمة</string>
+    <string name="home_qa_history">السجل</string>
+    <string name="home_qa_history_sub">الزيارات السابقة</string>
+    <string name="home_qa_profile">حسابي</string>
+    <string name="home_qa_profile_sub">بياناتك</string>
+
+    <string name="home_categories_title">تصفّح حسب الفئة</string>
+    <string name="home_tip_title">معلومة مفيدة</string>
+    <string name="home_tip">احضر قبل موعدك بعشر دقائق تقريبًا، واعرض رقم دورك على المكتب.</string>
+    <string name="home_welcome">أهلًا بك في SmartQ!</string>
+    <string name="home_welcome_name">أهلًا بك في SmartQ يا %s!</string>
+
+    <!-- ===== الأماكن ===== -->
+    <string name="places_title">اعثر على مكان</string>
+    <string name="places_subtitle">عيادات وبنوك وصالونات وأكثر. احجز دورك.</string>
+    <string name="places_search_hint">ابحث بالاسم أو المدينة أو الخدمة</string>
+    <string name="places_all">الكل</string>
+    <plurals name="places_count">
+        <item quantity="zero">لا توجد أماكن</item>
+        <item quantity="one">مكان واحد</item>
+        <item quantity="two">مكانان</item>
+        <item quantity="few">%s أماكن</item>
+        <item quantity="many">%s مكانًا</item>
+        <item quantity="other">%s مكان</item>
+    </plurals>
+    <string name="places_no_matches">لا توجد نتائج</string>
+    <string name="places_no_matches_message">جرّب كلمة أو فئة أخرى.</string>
+    <string name="places_none">لا توجد أماكن بعد</string>
+    <string name="places_none_message">ستظهر الأماكن هنا فور فتح الحجز فيها.</string>
+    <string name="places_clear_filters">مسح الفلاتر</string>
+    <string name="places_book">احجز</string>
+
+    <!-- ===== تفاصيل المكان ===== -->
+    <string name="details_open">الحجز متاح</string>
+    <string name="details_no_open">لا أيام متاحة</string>
+    <plurals name="details_days_count">
+        <item quantity="zero">لا أيام</item>
+        <item quantity="one">يوم واحد</item>
+        <item quantity="two">يومان</item>
+        <item quantity="few">%s أيام</item>
+        <item quantity="many">%s يومًا</item>
+        <item quantity="other">%s يوم</item>
+    </plurals>
+    <string name="details_none_title">لا توجد أيام متاحة حاليًا</string>
+    <string name="details_none_message">لا توجد جداول متاحة لهذا المكان الآن. يرجى المحاولة لاحقًا.</string>
+    <string name="details_browse_other">تصفّح أماكن أخرى</string>
+    <string name="details_choose_day">اختر اليوم</string>
+    <string name="details_choose_day_sub">ثم اختر وقتك بالضبط في الخطوة التالية.</string>
+    <string name="details_last_seat">آخر مقعد متبقٍ!</string>
+    <string name="details_few_seats">بقي %s مقاعد فقط</string>
+    <string name="details_seats_of">%1$s من %2$s مقعد متاح</string>
+</resources>

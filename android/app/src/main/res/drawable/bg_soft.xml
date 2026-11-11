@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft page background with blue / teal glows (DESIGN_SYSTEM soft gradient). -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item><color android:color="@color/bg" /></item>
+    <item android:gravity="top|start" android:width="360dp" android:height="360dp" android:start="-140dp" android:top="-120dp">
+        <shape android:shape="oval">
+            <gradient android:type="radial" android:gradientRadius="180dp" android:startColor="@color/glow_blue" android:endColor="#001F6FE0" />
+        </shape>
+    </item>
+    <item android:gravity="top|end" android:width="320dp" android:height="320dp" android:end="-140dp" android:top="-140dp">
+        <shape android:shape="oval">
+            <gradient android:type="radial" android:gradientRadius="160dp" android:startColor="@color/glow_teal" android:endColor="#0014A39A" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Splash: brand gradient, logo mark on a white plate with a soft ring, app name + tagline and a
+     queue-ticket reveal. A thin progress line appears only when the server is slow. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/brandBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:clipChildren="false"
+        android:clipToPadding="false"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp">
+
+        <FrameLayout
+            android:layout_width="176dp"
+            android:layout_height="176dp"
+            android:clipChildren="false">
+
+            <View
+                android:id="@+id/ring"
+                android:layout_width="176dp"
+                android:layout_height="176dp"
+                android:layout_gravity="center"
+                android:background="@drawable/splash_ring" />
+
+            <FrameLayout
+                android:id="@+id/logoPlate"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                android:layout_gravity="center"
+                android:background="@drawable/splash_plate"
+                android:elevation="12dp">
+
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="44dp"
+                    android:layout_height="70dp"
+                    android:layout_gravity="center"
+                    android:contentDescription="@string/brand_name"
+                    android:scaleType="fitCenter"
+                    android:src="@drawable/logo_mark" />
+            </FrameLayout>
+        </FrameLayout>
+
+        <TextView
+            android:id="@+id/appName"
+            style="@style/Text.Display"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:text="@string/brand_name"
+            android:textColor="@color/white"
+            android:textSize="38sp" />
+
+        <TextView
+            android:id="@+id/tagline"
+            style="@style/Text.Body"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:gravity="center"
+            android:text="@string/tagline"
+            android:textColor="@color/white_80"
+            android:textSize="16sp" />
+
+        <!-- queue-ticket reveal -->
+        <LinearLayout
+            android:id="@+id/ticketPill"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/splash_pill"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingStart="14dp"
+            android:paddingTop="8dp"
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:importantForAccessibility="no"
+                android:src="@drawable/ic_ticket"
+                app:tint="@color/white" />
+
+            <TextView
+                style="@style/Text.Caption"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="@string/splash_your_number"
+                android:textColor="@color/white_80" />
+
+            <TextView
+                android:id="@+id/ticketNumber"
+                style="@style/Text.H3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFeatureSettings="tnum"
+                android:text="@string/splash_queue_sample"
+                android:textColor="@color/white"
+                android:textDirection="ltr"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Friendly retry panel (hidden until the health check fails) -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/errorCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:visibility="gone">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:padding="24dp">
+
+                <FrameLayout
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:background="@drawable/bg_icon_tile"
+                    android:backgroundTint="@color/danger_tint">
+
+                    <ImageView
+                        android:id="@+id/errorIcon"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="center"
+                        android:importantForAccessibility="no"
+                        android:src="@drawable/ic_cloud_off"
+                        app:tint="@color/danger" />
+                </FrameLayout>
+
+                <TextView
+                    android:id="@+id/errorTitle"
+                    style="@style/Text.H3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:gravity="center"
+                    android:text="@string/state_unreachable_title" />
+
+                <TextView
+                    android:id="@+id/errorMessage"
+                    style="@style/Text.Muted"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="3dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnRetry"
+                    style="@style/Widget.SmartQ.Button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:text="@string/action_try_again"
+                    app:icon="@drawable/ic_refresh" />
+
+                <TextView
+                    android:id="@+id/serverHost"
+                    style="@style/Text.Caption"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:textDirection="ltr"
+                    android:textSize="11sp" />
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+    </LinearLayout>
+
+    <!-- slow server: thin progress line + status (fades in only after ~1.4s) -->
+    <LinearLayout
+        android:id="@+id/loadingBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingStart="64dp"
+        android:paddingEnd="64dp"
+        android:paddingBottom="40dp"
+        android:visibility="invisible">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progress"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:indicatorColor="@color/white"
+            app:trackColor="@color/white_20"
+            app:trackCornerRadius="2dp"
+            app:trackThickness="3dp" />
+
+        <TextView
+            android:id="@+id/status"
+            style="@style/Text.Caption"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:text="@string/splash_connecting"
+            android:textColor="@color/white_80" />
+    </LinearLayout>
+</FrameLayout>

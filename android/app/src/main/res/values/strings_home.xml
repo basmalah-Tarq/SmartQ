@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Home (dashboard), Places and Place details. -->
+<resources>
+    <!-- ===== Home ===== -->
+    <string name="home_greeting">%s,</string>
+    <string name="home_guest_name">Guest</string>
+    <string name="home_guest_initial">G</string>
+    <string name="home_cd_profile">Open your profile</string>
+    <string name="home_intro_title">Book your turn.\nSkip the waiting room.</string>
+    <string name="home_intro_body">Clinics, banks, salons and more, all in one place.</string>
+    <string name="home_search_hint">Search clinics, banks, salons…</string>
+    <string name="home_find">Find</string>
+
+    <string name="home_queue_placeholder" translatable="false">Q-000</string>
+    <string name="home_next_turn">Your next turn</string>
+    <string name="home_today_badge">Today</string>
+    <string name="home_starts">Starts</string>
+    <string name="home_date">Date</string>
+    <string name="home_time">Time</string>
+    <string name="home_ticket_cd">Your next turn %1$s at %2$s, %3$s %4$s. Open your bookings.</string>
+
+    <string name="home_guest_title">Your turn shows up here</string>
+    <string name="home_guest_message">Browse places freely. Sign in when you\'re ready to book and follow your live queue number.</string>
+    <string name="home_browse_places">Browse places</string>
+    <string name="home_empty_title">No upcoming bookings</string>
+    <string name="home_empty_message">Pick a place and grab your turn in seconds.</string>
+    <string name="home_error_title">Couldn\'t load your turn</string>
+
+    <string name="home_stat_placeholder" translatable="false">–</string>
+    <string name="home_stat_upcoming">Upcoming</string>
+    <string name="home_stat_done">Completed</string>
+    <string name="home_stat_total">All bookings</string>
+
+    <string name="home_upcoming_title">Coming up</string>
+    <string name="home_see_all">See all</string>
+
+    <string name="home_quick_title">Quick actions</string>
+    <string name="home_qa_book">Book a turn</string>
+    <string name="home_qa_book_sub">Find a place</string>
+    <string name="home_qa_bookings">My bookings</string>
+    <string name="home_qa_bookings_sub">Upcoming turns</string>
+    <string name="home_qa_history">History</string>
+    <string name="home_qa_history_sub">Past visits</string>
+    <string name="home_qa_profile">Profile</string>
+    <string name="home_qa_profile_sub">Your details</string>
+
+    <string name="home_categories_title">Browse by category</string>
+    <string name="home_tip_title">Good to know</string>
+    <string name="home_tip">Arrive about 10 minutes before your time and show your queue number at the desk.</string>
+    <string name="home_welcome">Welcome to SmartQ!</string>
+    <string name="home_welcome_name">Welcome to SmartQ, %s!</string>
+
+    <!-- ===== Places ===== -->
+    <string name="places_title">Find a place</string>
+    <string name="places_subtitle">Clinics, banks, salons and more. Book your turn.</string>
+    <string name="places_search_hint">Search by name, city or service</string>
+    <string name="places_all">All</string>
+    <plurals name="places_count">
+        <item quantity="one">%s place</item>
+        <item quantity="other">%s places</item>
+    </plurals>
+    <string name="places_no_matches">No matches</string>
+    <string name="places_no_matches_message">Try another word or category.</string>
+    <string name="places_none">No places yet</string>
+    <string name="places_none_message">Places will appear here as soon as they open for booking.</string>
+    <string name="places_clear_filters">Clear filters</string>
+    <string name="places_book">Book</string>
+
+    <!-- ===== Place details ===== -->
+    <string name="details_open">Booking open</string>
+    <string name="details_no_open">No open days</string>
+    <plurals name="details_days_count">
+        <item quantity="one">%s day</item>
+        <item quantity="other">%s days</item>
+    </plurals>
+    <string name="details_none_title">No open days right now</string>
+    <string name="details_none_message">This place has no free schedules at the moment. Please check again later.</string>
+    <string name="details_browse_other">Browse other places</string>
+    <string name="details_choose_day">Choose a day</string>
+    <string name="details_choose_day_sub">Then pick your exact time on the next step.</string>
+    <string name="details_last_seat">Last seat left!</string>
+    <string name="details_few_seats">Only %s seats left</string>
+    <string name="details_seats_of">%1$s of %2$s seats left</string>
+</resources>

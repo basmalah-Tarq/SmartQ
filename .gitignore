@@ -1,0 +1,52 @@
+# ---------- Secrets & server settings (NEVER commit) ----------
+web/config/config.local.php
+web/config/install_token.php
+web/config/seed_token.php
+web/config/mail.log
+*.log
+
+# ---------- Real data / backups ----------
+/database/
+web/SQL_Database_smartq.sql
+*.bak
+
+# ---------- Deploy builds (contain keys and tokens) ----------
+deploy/
+
+# ---------- User uploads (keep only demo place photos) ----------
+web/uploads/profile_images/*
+web/uploads/profiles/*
+!web/uploads/profile_images/.gitkeep
+!web/uploads/profiles/.gitkeep
+
+# ---------- Local test helpers ----------
+web/setup/
+web_screens/
+app_screens/
+build_android.log
+
+# ---------- Android build output ----------
+android/.gradle/
+android/**/build/
+android/local.properties
+android/.idea/
+android/*.iml
+android/app/release/
+android/SmartQ/
+*.apk
+*.aab
+*.keystore
+*.jks
+
+# ---------- OS / editors ----------
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# ---------- Not part of the public repo ----------
+*.zip
+to_delete.txt
+docs/*
+!docs/screenshots/

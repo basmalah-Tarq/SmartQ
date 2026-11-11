@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- ===== Email code sign-in ===== -->
+    <string name="auth_step_1">الخطوة 1 من 2</string>
+    <string name="auth_step_2">الخطوة 2 من 2</string>
+    <string name="auth_email_title">ما بريدك الإلكتروني؟</string>
+    <string name="auth_email_subtitle">سنرسل لك رمزًا من 6 أرقام. لا حاجة لكلمة مرور — جديد هنا؟ سننشئ حسابك تلقائيًا.</string>
+    <string name="auth_email_hint">البريد الإلكتروني</string>
+    <string name="auth_send_code">أرسل الرمز</string>
+    <string name="auth_email_trust">نستخدم بريدك فقط لتسجيل دخولك وإرسال حجوزاتك.</string>
+    <string name="auth_code_title">تحقّق من بريدك</string>
+    <string name="auth_code_title_new">أهلًا بك! تحقّق من بريدك</string>
+    <string name="auth_code_subtitle">أدخل الرمز المكوّن من 6 أرقام الذي أرسلناه إلى</string>
+    <string name="auth_change">تغيير</string>
+    <string name="auth_paste_code">لصق الرمز</string>
+    <string name="auth_resend_code">إعادة إرسال الرمز</string>
+    <string name="auth_resend_in">إعادة الإرسال بعد %s</string>
+    <string name="auth_sending">جارٍ الإرسال…</string>
+    <string name="auth_name_optional">اسمك (اختياري)</string>
+    <string name="auth_name_helper">حتى يعرف المكان من القادم. يمكنك إضافته لاحقًا.</string>
+    <string name="auth_create_my_account">أنشئ حسابي</string>
+    <string name="auth_continue">متابعة</string>
+    <string name="auth_code_hint">لم يصلك؟ تفقّد مجلد الرسائل غير المرغوب فيها أو العروض.</string>
+    <string name="auth_no_code_clipboard">لا يوجد رمز من 6 أرقام في الحافظة.</string>
+    <string name="auth_new_code_sent">أُرسل رمز جديد إلى %s</string>
+    <string name="auth_invalid_email">أدخل بريدًا إلكترونيًا صحيحًا</string>
+    <string name="auth_code_cd">رمز من 6 أرقام</string>
+
+    <!-- ===== Password login ===== -->
+    <string name="auth_login_title">أهلًا بعودتك</string>
+    <string name="auth_login_subtitle">سجّل الدخول لتحجز دورك وتتجنّب الانتظار.</string>
+    <string name="auth_sign_in_heading">تسجيل الدخول</string>
+    <string name="auth_email">البريد الإلكتروني</string>
+    <string name="auth_password">كلمة المرور</string>
+    <string name="auth_log_in">دخول</string>
+    <string name="auth_new_to">جديد في SmartQ؟</string>
+    <string name="auth_create_account_link">أنشئ حسابًا</string>
+    <string name="auth_brand_line">حجز ذكي وحلول متكاملة</string>
+    <string name="auth_enter_password">أدخل كلمة المرور</string>
+    <string name="auth_login_failed">فشل تسجيل الدخول. حاول مرة أخرى.</string>
+
+    <!-- ===== Register ===== -->
+    <string name="auth_register_title">أنشئ حسابك</string>
+    <string name="auth_register_subtitle">أقل من دقيقة، وبعدها احجز دورك في أي مكان.</string>
+    <string name="auth_full_name">الاسم الكامل</string>
+    <string name="auth_phone_optional">رقم الهاتف (اختياري)</string>
+    <string name="auth_birth_optional">تاريخ الميلاد (اختياري)</string>
+    <string name="auth_password_min">كلمة المرور (6 أحرف على الأقل)</string>
+    <string name="auth_confirm_password">تأكيد كلمة المرور</string>
+    <string name="auth_create_account">إنشاء الحساب</string>
+    <string name="auth_have_account">لديك حساب؟</string>
+    <string name="auth_birth_date">تاريخ الميلاد</string>
+    <string name="auth_enter_full_name">أدخل اسمك الكامل</string>
+    <string name="auth_min_6">6 أحرف على الأقل</string>
+    <string name="auth_passwords_mismatch">كلمتا المرور غير متطابقتين</string>
+    <string name="auth_created_login">تم إنشاء حسابك. سجّل الدخول من فضلك.</string>
+
+    <!-- ===== Booking: pick a time ===== -->
+    <string name="book_title">اختر الوقت</string>
+    <string name="book_step">الخطوة 2 من 3 · اختر دورك بالضبط</string>
+    <string name="book_available_times">الأوقات المتاحة</string>
+    <string name="book_help_choose">ساعدني في الاختيار</string>
+    <string name="book_help_choose_cd">ساعدني في اختيار وقت</string>
+    <string name="book_legend_free">متاح</string>
+    <string name="book_legend_selected">مختار</string>
+    <string name="book_legend_booked">محجوز / انتهى</string>
+    <string name="book_your_details">بياناتك</string>
+    <string name="book_phone">رقم الهاتف</string>
+    <string name="book_age_optional">العمر (اختياري)</string>
+    <string name="book_notes_optional">ملاحظات للمكان (اختياري)</string>
+    <string name="book_your_turn">دورك</string>
+    <string name="book_pick_time">اختر وقتًا</string>
+    <string name="book_tap_free_time">اضغط على وقت متاح في الأعلى</string>
+    <string name="book_confirm_booking">تأكيد الحجز</string>
+    <string name="book_add_name">اضغط لإضافة اسمك</string>
+    <string name="book_open_hours">الدوام %1$s · %2$s دقيقة لكل دور</string>
+    <plurals name="book_free_slots">
+        <item quantity="zero">لا أوقات متاحة</item>
+        <item quantity="one">وقت واحد متاح</item>
+        <item quantity="two">وقتان متاحان</item>
+        <item quantity="few">%s أوقات متاحة</item>
+        <item quantity="many">%s وقتًا متاحًا</item>
+        <item quantity="other">%s وقت متاح</item>
+    </plurals>
+    <string name="book_day_full_title">هذا اليوم محجوز بالكامل</string>
+    <string name="book_day_full_msg">كل الأدوار في هذا اليوم محجوزة أو انتهى وقتها. اختر يومًا آخر.</string>
+    <string name="book_choose_another_day">اختر يومًا آخر</string>
+    <string name="book_no_free_left">لا توجد أوقات متاحة في هذا اليوم.</string>
+    <string name="book_picked_for_you">اختار لك SmartQ الوقت %s: وقت مبكر وأقل ازدحامًا.</string>
+    <string name="book_sign_in_for">سجّل الدخول لحجز %s</string>
+    <string name="book_sign_in_msg">تستغرق ثوانيَ فقط، ثم نعيدك إلى هنا لتأكيد دورك.</string>
+    <string name="book_name_required">الاسم مطلوب</string>
+    <string name="book_confirm_title">تأكيد الحجز</string>
+    <string name="book_confirm_msg">%1$s\n%2$s · %3$s\n\nيمكنك الإلغاء لاحقًا من «حجوزاتي».</string>
+    <string name="book_failed_title">تعذّر حجز هذا الوقت</string>
+    <string name="book_pick_another">اختر وقتًا آخر</string>
+    <string name="book_slot_selected">مختار</string>
+    <string name="book_slot_free">متاح</string>
+    <string name="book_slot_passed">انتهى</string>
+    <string name="book_slot_full">ممتلئ</string>
+    <string name="book_slot_booked">محجوز</string>
+
+    <!-- ===== Booking success ===== -->
+    <string name="success_title">تم الحجز!</string>
+    <string name="success_subtitle">أظهر هذه التذكرة عند الاستقبال عند وصولك. وسنرسل لك تذكيرًا على البريد أيضًا.</string>
+    <string name="success_queue_number">رقم دورك</string>
+    <string name="success_date">التاريخ</string>
+    <string name="success_time">الوقت</string>
+    <string name="success_status">الحالة</string>
+    <string name="success_view_bookings">عرض حجوزاتي</string>
+    <string name="success_back_home">العودة إلى الرئيسية</string>
+    <string name="success_reminder_title">دورك بعد ساعة</string>
+    <string name="success_reminder_msg">%1$s في %2$s · %3$s</string>
+    <string name="success_reminder_info">وسنذكّرك أيضًا على هذا الهاتف قبل دورك بساعة.</string>
+
+    <!-- ===== My bookings ===== -->
+    <string name="appt_title">حجوزاتي</string>
+    <string name="appt_subtitle">كل أدوارك في مكان واحد.</string>
+    <string name="appt_tab_upcoming">القادمة</string>
+    <string name="appt_tab_past">السابقة</string>
+    <string name="appt_tab_count">%1$s (%2$s)</string>
+    <string name="appt_none_upcoming">لا أدوار قادمة — احجز دورك خلال ثوانٍ.</string>
+    <plurals name="appt_upcoming_count">
+        <item quantity="zero">لا أدوار قادمة.</item>
+        <item quantity="one">لديك دور قادم واحد.</item>
+        <item quantity="two">لديك دوران قادمان.</item>
+        <item quantity="few">لديك %s أدوار قادمة.</item>
+        <item quantity="many">لديك %s دورًا قادمًا.</item>
+        <item quantity="other">لديك %s دور قادم.</item>
+    </plurals>
+    <string name="appt_empty_upcoming_title">لا توجد حجوزات قادمة</string>
+    <string name="appt_empty_upcoming_msg">عندما تحجز دورًا سيظهر هنا مع رقم دورك.</string>
+    <string name="appt_find_place">ابحث عن مكان</string>
+    <string name="appt_empty_past_title">لا زيارات سابقة بعد</string>
+    <string name="appt_empty_past_msg">الحجوزات المكتملة والملغاة ستظهر هنا.</string>
+    <string name="appt_cancel_title">إلغاء هذا الحجز؟</string>
+    <string name="appt_cancel_msg">%1$s · %2$s\n%3$s · %4$s\n\nسيذهب دورك لشخص آخر. لا يمكن التراجع عن ذلك.</string>
+    <string name="appt_keep">إبقاء الحجز</string>
+    <string name="appt_cancel_booking">إلغاء الحجز</string>
+    <string name="appt_cancelled">تم إلغاء الحجز %s.</string>
+    <string name="appt_cancel_failed">تعذّر الإلغاء</string>
+    <string name="appt_queue">رقم الدور</string>
+
+    <!-- ===== Profile ===== -->
+    <string name="profile_personal">البيانات الشخصية</string>
+    <string name="profile_full_name">الاسم الكامل</string>
+    <string name="profile_email">البريد الإلكتروني</string>
+    <string name="profile_phone">رقم الهاتف</string>
+    <string name="profile_birth_date">تاريخ الميلاد</string>
+    <string name="profile_save">حفظ التغييرات</string>
+    <string name="profile_change_photo">تغيير الصورة</string>
+    <string name="profile_settings">الإعدادات</string>
+    <string name="profile_account">الحساب</string>
+    <string name="profile_my_bookings">حجوزاتي</string>
+    <string name="profile_my_bookings_sub">الأدوار القادمة والسابقة</string>
+    <string name="profile_log_out">تسجيل الخروج</string>
+    <string name="profile_version">SmartQ الإصدار %1$s · %2$s</string>
+    <string name="profile_saved">تم حفظ بياناتك.</string>
+    <string name="profile_image_read">تعذّرت قراءة هذه الصورة. اختر صورة أخرى.</string>
+    <string name="profile_photo_updated">تم تحديث الصورة.</string>
+    <string name="profile_logout_title">تسجيل الخروج؟</string>
+    <string name="profile_logout_msg">يمكنك العودة في أي وقت عبر بريدك الإلكتروني.</string>
+    <string name="profile_stay">البقاء</string>
+</resources>

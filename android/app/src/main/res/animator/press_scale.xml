@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Button press motion: quick scale-down, springy release. -->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:state_pressed="true" android:state_enabled="true">
+        <set>
+            <objectAnimator android:duration="120" android:propertyName="scaleX" android:valueTo="0.96" android:valueType="floatType" android:interpolator="@android:interpolator/fast_out_slow_in" />
+            <objectAnimator android:duration="120" android:propertyName="scaleY" android:valueTo="0.96" android:valueType="floatType" android:interpolator="@android:interpolator/fast_out_slow_in" />
+        </set>
+    </item>
+    <item>
+        <set>
+            <objectAnimator android:duration="260" android:propertyName="scaleX" android:valueTo="1.0" android:valueType="floatType" android:interpolator="@android:anim/overshoot_interpolator" />
+            <objectAnimator android:duration="260" android:propertyName="scaleY" android:valueTo="1.0" android:valueType="floatType" android:interpolator="@android:anim/overshoot_interpolator" />
+        </set>
+    </item>
+</selector>

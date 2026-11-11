@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="radius_card">20dp</dimen>
+    <dimen name="radius_input">14dp</dimen>
+    <dimen name="button_height">54dp</dimen>
+    <dimen name="max_content_width">560dp</dimen>
+</resources>

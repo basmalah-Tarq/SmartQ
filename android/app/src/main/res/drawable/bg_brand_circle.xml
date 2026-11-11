@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Brand gradient (navy -> blue -> teal) in a circle: onboarding / welcome illustrations. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <gradient android:angle="315" android:startColor="@color/navy_900" android:centerColor="@color/blue_600" android:endColor="@color/teal_500" />
+</shape>

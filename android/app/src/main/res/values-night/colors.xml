@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark theme overrides: surfaces, text and tints. Brand stops (navy/blue/teal/gold) stay the same. -->
+<resources>
+    <color name="bg">#0A1222</color>
+    <color name="surface">#121C30</color>
+    <color name="surface_alt">#1A2640</color>
+    <color name="border">#26354F</color>
+    <color name="text">#E6EDF8</color>
+    <color name="muted">#98A8C3</color>
+    <color name="skeleton">#1C2840</color>
+
+    <color name="blue_tint">#331F6FE0</color>
+    <color name="teal_tint">#3314A39A</color>
+    <color name="gold_tint">#33F5B82E</color>
+    <color name="success_tint">#3316A36B</color>
+    <color name="warning_tint">#33F59E0B</color>
+    <color name="danger_tint">#33E5484D</color>
+    <color name="muted_tint">#3398A8C3</color>
+
+    <color name="ink">#F1F5FC</color>
+    <color name="ink_soft">#C9D6EC</color>
+    <color name="accent">#5B9BFF</color>
+    <color name="chip_checked">#1F6FE0</color>
+    <color name="snack_bg">#24345A</color>
+    <color name="tip_bg">#2A2515</color>
+    <color name="skeleton_strong">#22304A</color>
+    <color name="ticket_dash">#33415E</color>
+    <color name="btn_disabled_bg">#2A3A58</color>
+    <color name="btn_disabled_text">#7F8DA6</color>
+    <color name="glow_blue">#331F6FE0</color>
+    <color name="glow_teal">#2614A39A</color>
+    <color name="placeholder_start">#1A2A48</color>
+    <color name="placeholder_end">#143A3C</color>
+</resources>

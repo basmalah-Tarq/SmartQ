@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-i18n="land.title">SmartQ | Queue management &amp; appointment booking</title>
+  <meta name="description" content="SmartQ is a queue management and appointment booking system: customers book a time or take a live queue number online, while clinics, banks, salons and offices run calm, organized days from one dashboard.">
+  <meta name="theme-color" content="#F5F8FD">
+  <link rel="icon" type="image/png" href="img/logo-small.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+  <style>.lx-pre{display:none}.sq-i18n-wait body{visibility:hidden}</style>
+  <link rel="stylesheet" href="css/smartq-ui.css?v=5">
+  <link rel="stylesheet" href="css/smartq-motion.css?v=5">
+  <link rel="stylesheet" href="css/smartq-theme.css?v=5">
+  <link rel="stylesheet" href="css/smartq-mobile.css?v=6">
+  <script>
+    /* Before first paint: theme (saved choice or system), language + direction (cookie), intro.
+       The intro (~1.4s) is timed purely in CSS; a click / key skips it; reduced-motion users never see it. */
+    (function (d) {
+      try {
+        var c = document.cookie, t = null, m = c.match(/(?:^|; )smartq_theme=(light|dark)/), l = c.match(/(?:^|; )smartq_lang=(en|ar)/);
+        try { t = localStorage.getItem('smartq_theme'); } catch (e) {}
+        if (t !== 'light' && t !== 'dark') t = m ? m[1] : null;
+        if (t !== 'light' && t !== 'dark') { t = window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'; d.setAttribute('data-theme-auto', ''); }
+        d.setAttribute('data-theme', t);
+        if (l && l[1] === 'ar') { d.setAttribute('lang', 'ar'); d.setAttribute('dir', 'rtl'); d.classList.add('sq-i18n-wait'); }
+      } catch (e) {}
+      var reduce = window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches;
+      d.classList.add('sq-js', reduce ? 'sq-nointro' : 'sq-intro');
+    })(document.documentElement);
+  </script>
+  <script src="js/i18n.js?v=5"></script>
+  <script defer src="js/smartq-ui.js?v=5"></script>
+  <script defer src="js/smartq-motion.js?v=5"></script>
+</head>
+<body class="sq-landing">
+
+  <!-- INTRO (every load, ~1.4s, skippable) -->
+  <div class="lx-pre" aria-hidden="true" data-pre>
+    <div class="lx-pre__inner">
+      <span class="lx-pre__logo"><img src="img/logo-small.png" alt=""></span>
+      <span class="lx-pre__word" dir="ltr">smart<em>Q</em></span>
+      <span class="lx-pre__bar"><i></i></span>
+    </div>
+  </div>
+
+  <!-- NAV -->
+  <header class="sq-nav" id="top">
+    <div class="sq-container sq-nav__inner">
+      <a href="#home" class="sq-lockup" aria-label="SmartQ home" data-i18n-attr="aria-label:land.home_aria">
+        <span class="sq-logo-mark"><img src="img/logo-small.png" alt=""></span>
+        <span><span class="sq-lockup__word" dir="ltr">smart<em>Q</em></span><span class="sq-lockup__tag" data-i18n="land.tag">Queue management &amp; booking</span></span>
+      </a>
+      <nav class="sq-nav__links" aria-label="Main navigation">
+        <a href="#product" data-i18n="land.nav_product">Product</a>
+        <a href="#how" data-i18n="land.nav_how">How it works</a>
+        <a href="#industries" data-i18n="land.nav_industries">Industries</a>
+        <a href="#pricing" data-i18n="land.nav_pricing">Pricing</a>
+        <a href="#faq" data-i18n="land.nav_faq">FAQ</a>
+      </nav>
+      <div class="sq-nav__actions">
+        <div class="sq-prefs sq-prefs--nav">
+          <div class="sq-lang" role="group" aria-label="Language">
+            <a href="#" class="sq-lang__opt" data-sq-lang="en" lang="en">EN</a>
+            <span class="sq-lang__sep" aria-hidden="true"></span>
+            <a href="#" class="sq-lang__opt" data-sq-lang="ar" lang="ar">ع</a>
+          </div>
+          <button type="button" class="sq-theme-btn" data-sq-theme-toggle aria-label="Switch light / dark mode"><i class="fa-solid fa-sun sq-theme-btn__sun" aria-hidden="true"></i><i class="fa-solid fa-moon sq-theme-btn__moon" aria-hidden="true"></i></button>
+        </div>
+        <a href="login.php" class="btn sq-btn--ghost" data-i18n="land.login">Log in</a>
+        <a href="signup.php" class="btn btn-primary"><span data-i18n="land.get_started">Get started</span> <i class="fa-solid fa-arrow-right sq-flip"></i></a>
+      </div>
+      <button class="sq-icon-btn sq-nav__toggle" type="button" data-sq-toggle="nav" aria-label="Toggle navigation" data-i18n-attr="aria-label:land.toggle_nav" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="sq-hero" id="home">
+      <div class="sq-blob sq-blob--1"></div>
+      <div class="sq-blob sq-blob--2"></div>
+      <div class="sq-hero__grid-bg"></div>
+
+      <div class="sq-container sq-hero__inner">
+        <div class="sq-hero__copy">
+          <!-- phone only: app-style hero card with the live ticket (css/smartq-mobile.css) -->
+          <div class="sqm-landcard" aria-hidden="true">
+            <div class="sqm-landcard__ticket">
+              <span class="sqm-landcard__serving"><i></i> <span data-i18n="land.m_serving">Now serving</span> <b dir="ltr">Q-005</b></span>
+              <small data-i18n="land.m_your_turn">Your turn</small>
+              <strong dir="ltr">Q-007</strong>
+              <span class="sqm-landcard__cut"></span>
+              <span class="sqm-landcard__meta"><i class="fa-solid fa-briefcase-medical"></i> <span data-i18n="land.m_meta">10:30 AM · City Clinic</span></span>
+            </div>
+          </div>
+          <span class="sq-eyebrow"><span class="sq-live-dot"></span> <span data-i18n="land.eyebrow">Queue management &amp; appointment booking</span></span>
+          <h1 data-i18n-html="land.h1">Book your turn.<br><span class="sq-grad-text">Skip the line.</span></h1>
+          <p class="sq-hero__lead" data-i18n="land.lead">SmartQ lets customers book an appointment or take a live queue number online — and gives clinics, banks, salons and offices one calm dashboard to serve them on time.</p>
+          <div class="sq-hero__ctas">
+            <a href="signup.php" class="btn btn-primary sq-btn--lg"><span data-i18n="land.cta_free">Get started free</span> <i class="fa-solid fa-arrow-right sq-flip"></i></a>
+            <a href="login.php" class="btn sq-btn--lg sq-btn--secondary" data-i18n="land.login">Log in</a>
+          </div>
+          <a href="user/places.php" class="sq-hero__help" style="display:inline-flex;gap:6px;align-items:center;margin:4px 0 10px"><i class="fa-solid fa-eye"></i> <span data-i18n="land.browse">Browse places as a guest — no account needed</span></a>
+          <div class="sq-hero__app">
+            <a href="https://drive.usercontent.google.com/download?id=15uEVxpWX8XrNO_Pps8ss4AWoXTe64ZWq&amp;export=download&amp;confirm=t" class="btn sq-btn--app" download><i class="fa-solid fa-mobile-screen-button"></i> <span data-i18n="land.apk">Download the Android app (APK)</span></a>
+            <a href="#install-help" class="sq-hero__help" data-sq-modal="install-help"><i class="fa-solid fa-circle-question"></i> <span data-i18n="land.how_install">How to install?</span></a>
+          </div>
+          <div class="sq-hero__points">
+            <span><i class="fa-solid fa-circle-check"></i><span data-i18n="land.point1">Online booking 24/7</span></span>
+            <span><i class="fa-solid fa-circle-check"></i><span data-i18n="land.point2">Live “now serving” number</span></span>
+            <span><i class="fa-solid fa-circle-check"></i><span data-i18n="land.point3">Free for customers</span></span>
+          </div>
+        </div>
+
+        <div class="sq-hero__visual" aria-label="Preview of SmartQ: a live now-serving board, your queue ticket and today's free appointment times" data-i18n-attr="aria-label:land.visual_aria">
+          <div class="sq-browser">
+            <div class="sq-browser__bar" aria-hidden="true">
+              <span class="sq-browser__dots"><i></i><i></i><i></i></span>
+              <span class="sq-browser__url" dir="ltr"><i class="fa-solid fa-lock"></i> smartq.app/my-queue</span>
+            </div>
+            <div class="sq-browser__body">
+              <aside class="sq-browser__side" aria-hidden="true">
+                <span class="sq-logo-mark"><img src="img/logo-small.png" alt=""></span>
+                <span class="is-on"><i class="fa-solid fa-house"></i></span>
+                <span><i class="fa-solid fa-location-dot"></i></span>
+                <span><i class="fa-solid fa-ticket"></i></span>
+                <span><i class="fa-solid fa-user"></i></span>
+              </aside>
+              <div class="sq-browser__main" data-flap-scope>
+                <div class="sq-browser__head">
+                  <div><small data-i18n="land.greet">Good morning, Sara</small><strong data-i18n="land.your_queue">Your live queue</strong></div>
+                  <span class="lx-tag"><span class="sq-live-dot"></span> <span data-i18n="land.live">Live</span></span>
+                </div>
+                <div class="sq-browser__grid">
+                  <div class="lx-board">
+                    <small data-i18n="land.serving_at">Now serving · City Clinic</small>
+                    <div class="lx-flaps" dir="ltr" data-flap data-from="41" data-to="46">Q-041</div>
+                    <div class="lx-board__foot"><span data-i18n="land.counter">Counter 2</span><span data-ahead>5 people ahead</span></div>
+                  </div>
+                  <div class="sq-browser__ticket">
+                    <div class="lx-ring" data-ring style="--p:.2"><svg viewBox="0 0 44 44"><circle cx="22" cy="22" r="19"/><circle cx="22" cy="22" r="19"/></svg><b data-ring-n>5</b></div>
+                    <span data-i18n="land.your_number">Your number</span>
+                    <strong class="sq-ltr">Q-046</strong>
+                    <em><i class="fa-solid fa-clock"></i> <span data-i18n="land.eta">10:30 AM · ETA ~12 min</span></em>
+                  </div>
+                </div>
+                <div class="sq-browser__label" data-i18n="land.book_at">Book an appointment · City Clinic</div>
+                <div class="sq-browser__days" aria-hidden="true">
+                  <span><small data-i18n="land.d_mon">Mon</small>9</span><span class="is-sel"><small data-i18n="land.d_tue">Tue</small>10</span><span><small data-i18n="land.d_wed">Wed</small>11</span><span><small data-i18n="land.d_thu">Thu</small>12</span><span class="is-off"><small data-i18n="land.d_fri">Fri</small>13</span><span><small data-i18n="land.d_sat">Sat</small>14</span>
+                </div>
+                <div class="sq-browser__slots" aria-hidden="true" dir="ltr">
+                  <span class="is-off">9:30</span><span>10:00</span><span class="is-sel">10:30</span><span>11:00</span><span class="is-off">11:30</span><span>12:00</span>
+                </div>
+                <div class="sq-browser__rows" aria-hidden="true">
+                  <div><b class="sq-ltr">Q-042</b><span data-i18n="land.sara">Sara M.</span><em class="is-next" data-i18n="land.next">Next</em></div>
+                  <div class="is-me"><b class="sq-ltr">Q-046</b><span data-i18n="land.you">You</span><em class="sq-ltr">10:30</em></div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="sq-float-chip sq-float-chip--a" aria-hidden="true"><i class="fa-solid fa-circle-check"></i><span><span data-i18n="land.chip_a">Booking confirmed</span><small data-i18n="land.chip_a_sub">City Clinic · Tue 10:30 AM</small></span></div>
+          <div class="sq-float-chip sq-float-chip--b" aria-hidden="true"><i class="fa-solid fa-hourglass-half"></i><span><span data-i18n="land.chip_b">Average wait today</span><small data-i18n="land.chip_b_sub">9 min · down from 25</small></span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES (static) -->
+    <section class="sq-strip" aria-label="Places that use SmartQ" data-i18n-attr="aria-label:land.strip_aria">
+      <div class="sq-container">
+        <div class="sq-strip__label" data-i18n="land.strip">Built for every place with a waiting line</div>
+        <div class="sq-strip__row">
+          <span><i class="fa-solid fa-stethoscope"></i> <span data-i18n="land.i_clinics">Clinics</span></span>
+          <span><i class="fa-solid fa-hospital"></i> <span data-i18n="land.i_hospitals">Hospitals</span></span>
+          <span><i class="fa-solid fa-building-columns"></i> <span data-i18n="land.i_banks">Banks</span></span>
+          <span><i class="fa-solid fa-scissors"></i> <span data-i18n="land.i_salons">Salons</span></span>
+          <span><i class="fa-solid fa-spa"></i> <span data-i18n="land.i_beauty">Beauty centers</span></span>
+          <span><i class="fa-solid fa-dumbbell"></i> <span data-i18n="land.i_gyms">Gyms</span></span>
+          <span><i class="fa-solid fa-landmark"></i> <span data-i18n="land.i_offices">Public offices</span></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCT: the three things SmartQ does -->
+    <section class="sq-section" id="product">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-layer-group"></i> <span data-i18n="land.one_system">One system</span></span>
+          <h2 data-i18n="land.prod_h2">Appointments, live queues and analytics — together.</h2>
+          <p data-i18n="land.prod_p">Everything a busy front desk needs to replace the crowded waiting room with a predictable, on-time flow.</p>
+        </div>
+        <div class="sq-pillars" data-stagger="100">
+          <article class="sq-pillar" data-reveal>
+            <div class="sq-pillar__demo sq-pillar__demo--cal" aria-hidden="true">
+              <div class="sq-mini-cal">
+                <b data-i18n="land.tue10">Tue 10</b>
+                <span>9:00</span><span class="is-off">9:30</span><span>10:00</span><span class="is-sel">10:30</span><span>11:00</span><span class="is-off">11:30</span>
+              </div>
+            </div>
+            <div class="sq-feature__icon"><i class="fa-solid fa-calendar-check"></i></div>
+            <h3 data-i18n="land.p1_h">Appointment booking</h3>
+            <p data-i18n="land.p1_p">Customers pick a day and a free time slot online, 24/7. Managers publish a schedule once and SmartQ splits it into bookable slots.</p>
+          </article>
+          <article class="sq-pillar" data-reveal>
+            <div class="sq-pillar__demo" aria-hidden="true">
+              <div class="sq-mini-ticket">
+                <small data-i18n="land.your_ticket">Your ticket</small>
+                <strong class="sq-ltr">Q-046</strong>
+                <span><i class="fa-solid fa-user-group"></i> <span data-i18n="land.ahead3">3 ahead · ETA ~8 min</span></span>
+              </div>
+            </div>
+            <div class="sq-feature__icon sq-feature__icon--teal"><i class="fa-solid fa-ticket"></i></div>
+            <h3 data-i18n="land.p2_h">Virtual queue &amp; tickets</h3>
+            <p data-i18n-html="land.p2_p">Every booking gets a queue number like <b>Q-046</b>. Customers follow “now serving” live and arrive right when it is their turn.</p>
+          </article>
+          <article class="sq-pillar" data-reveal>
+            <div class="sq-pillar__demo" aria-hidden="true">
+              <div class="sq-mini-chart">
+                <span style="--h:30%"></span><span style="--h:55%"></span><span style="--h:85%"></span><span style="--h:100%" class="is-peak"></span><span style="--h:70%"></span><span style="--h:45%"></span><span style="--h:35%"></span>
+              </div>
+            </div>
+            <div class="sq-feature__icon sq-feature__icon--navy"><i class="fa-solid fa-chart-column"></i></div>
+            <h3 data-i18n="land.p3_h">Dashboard &amp; analytics</h3>
+            <p data-i18n="land.p3_p">See today’s queue, confirm or complete visits, spot peak hours and export bookings to Excel or PDF in one click.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- DASHBOARD PREVIEW -->
+    <section class="sq-section sq-section--white" id="dashboard">
+      <div class="sq-container sq-dash-wrap">
+        <div class="sq-dash-copy" data-reveal="left">
+          <span class="sq-eyebrow"><i class="fa-solid fa-briefcase"></i> <span data-i18n="land.for_managers">For managers</span></span>
+          <h2 data-i18n="land.dash_h2">Run the whole day from one screen.</h2>
+          <p data-i18n="land.dash_p">The manager workspace shows who is waiting, who is next and how the day is going — no paper lists, no shouting names.</p>
+          <ul class="sq-checks">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="land.check1">Confirm, complete or mark a booking as missed</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="land.check2">Auto-generated time slots from your opening hours</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="land.check3">Customer list with Excel &amp; PDF exports</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="land.check4">Admins oversee every place, manager and booking</span></li>
+          </ul>
+          <a href="signup.php#manager" class="btn btn-primary"><span data-i18n="land.register_place">Register your place</span> <i class="fa-solid fa-arrow-right sq-flip"></i></a>
+        </div>
+
+        <div class="sq-dash" data-reveal="right" aria-label="Preview of the manager dashboard" data-i18n-attr="aria-label:land.dash_aria">
+          <div class="sq-dash__top" aria-hidden="true">
+            <div><small data-i18n="land.dental">Bright Smile Dental</small><strong data-i18n="land.todays_queue">Today’s queue</strong></div>
+            <span class="lx-tag"><span class="sq-live-dot"></span> <span data-i18n="land.live">Live</span></span>
+          </div>
+          <div class="sq-dash__stats" aria-hidden="true">
+            <div><span data-i18n="land.waiting">Waiting</span><b>12</b></div>
+            <div><span data-i18n="land.served">Served today</span><b>48</b></div>
+            <div><span data-i18n="land.avg_wait">Avg. wait</span><b>9<small data-i18n="land.min">min</small></b></div>
+            <div><span data-i18n="land.no_shows">No-shows</span><b>2</b></div>
+          </div>
+          <div class="sq-dash__grid" aria-hidden="true">
+            <div class="sq-dash__panel">
+              <h4 data-i18n="land.up_next">Up next</h4>
+              <div class="sq-dash__row is-now"><b class="sq-ltr">Q-041</b><span data-i18n="land.r1">Sara M. · Cleaning</span><em data-i18n="land.serving">Serving</em></div>
+              <div class="sq-dash__row"><b class="sq-ltr">Q-042</b><span data-i18n="land.r2">Omar K. · Check-up</span><em class="is-c" data-i18n="land.confirmed">Confirmed</em></div>
+              <div class="sq-dash__row"><b class="sq-ltr">Q-043</b><span data-i18n="land.r3">Lina A. · Whitening</span><em class="is-w" data-i18n="land.waiting">Waiting</em></div>
+              <div class="sq-dash__row"><b class="sq-ltr">Q-044</b><span data-i18n="land.r4">Karim S. · Consultation</span><em class="is-w" data-i18n="land.waiting">Waiting</em></div>
+            </div>
+            <div class="sq-dash__panel">
+              <h4 data-i18n="land.peak">Peak hours</h4>
+              <div class="sq-mini-chart sq-mini-chart--lg" dir="ltr">
+                <span style="--h:25%"></span><span style="--h:45%"></span><span style="--h:80%"></span><span style="--h:100%" class="is-peak"></span><span style="--h:65%"></span><span style="--h:50%"></span><span style="--h:30%"></span>
+              </div>
+              <div class="sq-dash__axis" dir="ltr"><span>9</span><span>10</span><span>11</span><span>12</span><span>1</span><span>2</span><span>3</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="sq-section" id="how">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-route"></i> <span data-i18n="land.how_eyebrow">How it works</span></span>
+          <h2 data-i18n="land.how_h2">From search to your turn in four steps.</h2>
+          <p data-i18n="land.how_p">SmartQ keeps the whole journey clear — from finding a place to walking in right on time.</p>
+        </div>
+        <div class="sq-steps" data-stagger="110">
+          <article class="sq-step" data-reveal>
+            <div class="sq-step__icon"><i class="fa-solid fa-magnifying-glass"></i><b>1</b></div>
+            <h3 data-i18n="land.s1_h">Find a place</h3>
+            <p data-i18n="land.s1_p">Search clinics, banks, salons, gyms and offices by name, city or category.</p>
+          </article>
+          <article class="sq-step" data-reveal>
+            <div class="sq-step__icon"><i class="fa-solid fa-calendar-days"></i><b>2</b></div>
+            <h3 data-i18n="land.s2_h">Choose a time</h3>
+            <p data-i18n="land.s2_p">Pick a day and a free time slot — or let SmartQ suggest the best one.</p>
+          </article>
+          <article class="sq-step" data-reveal>
+            <div class="sq-step__icon"><i class="fa-solid fa-ticket"></i><b>3</b></div>
+            <h3 data-i18n="land.s3_h">Get your number</h3>
+            <p data-i18n-html="land.s3_p">Confirm and receive your queue ticket instantly, like <strong>Q-007</strong>.</p>
+          </article>
+          <article class="sq-step" data-reveal>
+            <div class="sq-step__icon"><i class="fa-solid fa-clock"></i><b>4</b></div>
+            <h3 data-i18n="land.s4_h">Arrive on time</h3>
+            <p data-i18n="land.s4_p">Follow the live queue from your browser and walk in when your turn is near.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="sq-section sq-section--white" id="industries">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-location-dot"></i> <span data-i18n="land.ind_eyebrow">Industries</span></span>
+          <h2 data-i18n="land.ind_h2">One platform for every line you would rather skip.</h2>
+          <p data-i18n="land.ind_p">From a doctor’s visit to your next haircut — book them all the same simple way.</p>
+        </div>
+        <div class="sq-cats" data-stagger="70">
+          <div class="sq-cat" data-reveal><i class="fa-solid fa-stethoscope"></i><strong data-i18n="land.c1">Clinics</strong><span data-i18n="land.c1s">Doctor visits</span></div>
+          <div class="sq-cat sq-cat--teal" data-reveal><i class="fa-solid fa-hospital"></i><strong data-i18n="land.c2">Hospitals</strong><span data-i18n="land.c2s">Check-ups &amp; tests</span></div>
+          <div class="sq-cat" data-reveal><i class="fa-solid fa-building-columns"></i><strong data-i18n="land.c3">Banks</strong><span data-i18n="land.c3s">Branch services</span></div>
+          <div class="sq-cat sq-cat--teal" data-reveal><i class="fa-solid fa-scissors"></i><strong data-i18n="land.c4">Salons</strong><span data-i18n="land.c4s">Hair &amp; beauty</span></div>
+          <div class="sq-cat" data-reveal><i class="fa-solid fa-dumbbell"></i><strong data-i18n="land.c5">Gyms</strong><span data-i18n="land.c5s">Coaching sessions</span></div>
+          <div class="sq-cat sq-cat--teal" data-reveal><i class="fa-solid fa-landmark"></i><strong data-i18n="land.c6">Public offices</strong><span data-i18n="land.c6s">Citizen services</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="sq-section">
+      <div class="sq-container">
+        <div class="sq-stats" data-reveal="zoom">
+          <div class="sq-stat"><strong dir="ltr"><span data-count="24">24</span><em>/7</em></strong><span data-i18n="land.st1">Online booking, day and night</span></div>
+          <div class="sq-stat"><strong dir="ltr">&lt;<span data-count="60">60</span><em>s</em></strong><span data-i18n="land.st2">To book your turn</span></div>
+          <div class="sq-stat"><strong><span data-count="3">3</span></strong><span data-i18n="land.st3">Workspaces: customer, manager, admin</span></div>
+          <div class="sq-stat"><strong><span data-count="0">0</span></strong><span data-i18n="land.st4">Apps required — it runs in the browser</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="sq-section" style="padding-top:0">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-heart"></i> <span data-i18n="land.why">Why people like it</span></span>
+          <h2 data-i18n="land.why_h2">Less waiting. More living.</h2>
+        </div>
+        <div class="sq-quotes" data-stagger="100">
+          <figure class="sq-quote" data-reveal>
+            <div class="sq-stars" aria-label="5 stars" data-i18n-attr="aria-label:land.stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p data-i18n="land.q1">“I booked my clinic visit from my laptop and walked in when my number came up. No more sitting in a crowded waiting room.”</p>
+            <footer><span class="sq-avatar">P</span><div><b data-i18n="land.q1_who">Clinic patient</b><span data-i18n="land.q1_role">Customer</span></div></footer>
+          </figure>
+          <figure class="sq-quote" data-reveal>
+            <div class="sq-stars" aria-label="5 stars" data-i18n-attr="aria-label:land.stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p data-i18n="land.q2">“Creating a full day of appointments takes seconds. The bookings list tells my team exactly who is next.”</p>
+            <footer><span class="sq-avatar" style="--ac:#14A39A">M</span><div><b data-i18n="land.q2_who">Salon manager</b><span data-i18n="land.q2_role">Manager</span></div></footer>
+          </figure>
+          <figure class="sq-quote" data-reveal>
+            <div class="sq-stars" aria-label="5 stars" data-i18n-attr="aria-label:land.stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+            <p data-i18n="land.q3">“The admin dashboard shows the busiest places and peak hours at a glance, and reports export in one click.”</p>
+            <footer><span class="sq-avatar" style="--ac:#12306B">A</span><div><b data-i18n="land.q3_who">Platform admin</b><span data-i18n="land.q3_role">Admin</span></div></footer>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRICING -->
+    <section class="sq-section sq-section--white" id="pricing">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-tag"></i> <span data-i18n="land.pricing">Pricing</span></span>
+          <h2 data-i18n="land.pr_h2">Plans for every place.</h2>
+          <p data-i18n="land.pr_p">Booking is always free for customers. Choose the plan that fits your business.</p>
+        </div>
+        <div class="sq-plans" data-stagger="100">
+          <article class="sq-plan" data-reveal>
+            <h3 data-i18n="land.free">Free</h3>
+            <div class="sq-plan__price"><span dir="ltr">$0</span> <small data-i18n="land.first_months">/ first months</small></div>
+            <p class="sq-plan__note" data-i18n="land.free_p">Try SmartQ and start organizing your queue.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.f1">Online bookings</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.f2">Queue numbers</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.f3">One place</span></li>
+            </ul>
+            <a href="signup.php" class="btn btn-secondary" data-i18n="land.start_free">Start free</a>
+          </article>
+          <article class="sq-plan sq-plan--hot" data-reveal>
+            <span class="sq-chip sq-chip--gold sq-plan__badge" data-i18n="land.popular">Popular</span>
+            <h3 data-i18n="land.plus">Plus</h3>
+            <div class="sq-plan__price"><span dir="ltr">$5.99</span> <small data-i18n="land.month">/ month</small></div>
+            <p data-i18n="land.plus_p">For small teams that need booking and queue tools.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pl1">Everything in Free</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pl2">Auto-generated time slots</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pl3">Customer list &amp; exports</span></li>
+            </ul>
+            <a href="signup.php" class="btn btn-primary" data-i18n="land.choose_plus">Choose Plus</a>
+          </article>
+          <article class="sq-plan" data-reveal>
+            <h3 data-i18n="land.pro">Pro</h3>
+            <div class="sq-plan__price"><span dir="ltr">$9.99</span> <small data-i18n="land.month">/ month</small></div>
+            <p class="sq-plan__note" data-i18n="land.pro_p">Advanced tools for busy places and full management.</p>
+            <ul>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pp1">Everything in Plus</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pp2">PDF reports</span></li>
+              <li><i class="fa-solid fa-check"></i><span data-i18n="land.pp3">Priority support</span></li>
+            </ul>
+            <a href="signup.php" class="btn btn-secondary" data-i18n="land.choose_pro">Choose Pro</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="sq-section" id="faq">
+      <div class="sq-container">
+        <div class="sq-head sq-head--center" data-reveal>
+          <span class="sq-eyebrow"><i class="fa-solid fa-circle-question"></i> <span data-i18n="land.faq">FAQ</span></span>
+          <h2 data-i18n="land.faq_h2">Questions, answered.</h2>
+        </div>
+        <div class="sq-faq" data-stagger="70">
+          <details data-reveal open>
+            <summary data-i18n="land.fq1">Is SmartQ free for customers?</summary>
+            <p data-i18n="land.fa1">Yes. Creating an account, booking a turn and following your queue is completely free for customers.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="land.fq2">Do I need a password?</summary>
+            <p data-i18n="land.fa2">No. Enter your email and we send you a 6-digit code to sign in. You can still use a password if you prefer.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="land.fq3">Do I need to install anything?</summary>
+            <p data-i18n="land.fa3">No. SmartQ runs in your browser on any computer, tablet or phone. An optional Android app is available if you prefer it.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="land.fq4">How do I get my queue number?</summary>
+            <p data-i18n-html="land.fa4">Pick a place, choose a schedule and a free time slot, then confirm. Your ticket with a number like Q-007 appears instantly and stays in “My appointments”.</p>
+          </details>
+          <details data-reveal>
+            <summary data-i18n="land.fq5">I run a clinic / salon. How do I start?</summary>
+            <p data-i18n="land.fa5">Choose “Register a business” on the sign-up page, add your place details, then create a schedule — SmartQ splits it into bookable slots automatically.</p>
+          </details>
+        </div>
+
+        <!-- small, optional Android row -->
+        <div class="sq-android-note" id="app" data-reveal>
+          <span class="sq-android-note__icon"><i class="fa-solid fa-mobile-screen-button"></i></span>
+          <div>
+            <strong data-i18n="land.and_h">Prefer your phone? There’s an Android app too.</strong>
+            <span><span data-i18n="land.and_p">Same account and bookings as the website — completely optional.</span> <a href="#install-help" data-sq-modal="install-help" data-i18n="land.how_install">How to install?</a></span>
+          </div>
+          <a href="https://drive.usercontent.google.com/download?id=15uEVxpWX8XrNO_Pps8ss4AWoXTe64ZWq&amp;export=download&amp;confirm=t" class="btn btn-secondary btn-sm" download><i class="fa-solid fa-download"></i> <span data-i18n="land.download_apk">Download APK</span></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="sq-section" style="padding-top:0">
+      <div class="sq-container">
+        <div class="sq-cta" data-reveal="zoom">
+          <div>
+            <h2 data-i18n="land.cta_h2">Ready to skip the line?</h2>
+            <p data-i18n="land.cta_p">Create your free account and book your first turn in under a minute.</p>
+          </div>
+          <div class="sq-cta__btns">
+            <a href="signup.php" class="btn sq-btn--light sq-btn--lg"><span data-i18n="land.cta_free">Get started free</span> <i class="fa-solid fa-arrow-right sq-flip"></i></a>
+            <a href="login.php" class="btn sq-btn--outline-light sq-btn--lg" data-i18n="land.login">Log in</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="sq-footer" id="contact">
+    <div class="sq-container">
+      <div class="sq-footer__grid">
+        <div>
+          <a href="#home" class="sq-lockup sq-lockup--dark">
+            <span class="sq-logo-mark"><img src="img/logo-small.png" alt=""></span>
+            <span><span class="sq-lockup__word" dir="ltr">smart<em>Q</em></span><span class="sq-lockup__tag" data-i18n="land.foot_tag">Intelligent Booking &amp; Solutions</span></span>
+          </a>
+          <p data-i18n="land.foot_p">Queue management and appointment booking made clearer for everyone — customers, managers and admins.</p>
+        </div>
+        <div>
+          <h4 data-i18n="land.foot_product">Product</h4>
+          <a href="#product" data-i18n="land.features">Features</a>
+          <a href="#how" data-i18n="land.nav_how">How it works</a>
+          <a href="#pricing" data-i18n="land.nav_pricing">Pricing</a>
+          <a href="https://drive.usercontent.google.com/download?id=15uEVxpWX8XrNO_Pps8ss4AWoXTe64ZWq&amp;export=download&amp;confirm=t" download data-i18n="land.android_opt">Android app (optional)</a>
+        </div>
+        <div>
+          <h4 data-i18n="land.account">Account</h4>
+          <a href="login.php" data-i18n="land.login">Log in</a>
+          <a href="signup.php" data-i18n="land.create_account">Create account</a>
+          <a href="#faq" data-i18n="land.nav_faq">FAQ</a>
+        </div>
+        <div>
+          <h4 data-i18n="land.contact">Contact</h4>
+          <a href="mailto:basmalahtarq195@gmail.com"><i class="fa-solid fa-envelope"></i> <span data-i18n="land.email_us">Email us</span></a>
+          <a href="mailto:basmalahtarq195@gmail.com" dir="ltr" style="font-size:13px;word-break:break-all;text-align:start">basmalahtarq195@gmail.com</a>
+        </div>
+      </div>
+      <div class="sq-footer__bottom">
+        <span data-i18n="land.copyright">© SmartQ — Book your turn. Skip the line.</span>
+        <a href="#home" style="display:inline-flex;align-items:center;gap:6px;padding:0"><span data-i18n="land.top">Back to top</span> <i class="fa-solid fa-arrow-up"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- INSTALL HELP (modal; also works without JS via :target) -->
+  <div class="sq-modal sq-modal--wide" id="install-help" role="dialog" aria-modal="true" aria-labelledby="installTitle" aria-hidden="true">
+    <a href="#" class="sq-modal__scrim" data-sq-modal-close aria-label="Close" data-i18n-attr="aria-label:land.close"></a>
+    <div class="sq-modal__box">
+      <a href="#" class="sq-modal__close" data-sq-modal-close aria-label="Close" data-i18n-attr="aria-label:land.close"><i class="fa-solid fa-xmark"></i></a>
+      <span class="sq-modal__icon sq-modal__icon--android" aria-hidden="true"><i class="fa-solid fa-mobile-screen-button"></i></span>
+      <h3 id="installTitle" data-i18n="land.inst_h">Install the SmartQ Android app</h3>
+      <p data-i18n="land.inst_p">The app is optional — the website does everything. Installing takes about a minute.</p>
+      <ol class="sq-install-steps">
+        <li><span data-i18n-html="land.inst1"><strong>Download the APK</strong>Tap “Download the Android app (APK)” on your Android phone. The file is <code>SmartQ.apk</code>.</span></li>
+        <li><span data-i18n-html="land.inst2"><strong>Allow “Install unknown apps”</strong>When Android asks, open Settings and allow your browser (e.g. Chrome) to install unknown apps. You only do this once.</span></li>
+        <li><span data-i18n-html="land.inst3"><strong>Open &amp; install</strong>Open the downloaded file from the notification or your Downloads folder and tap <b>Install</b>.</span></li>
+        <li><span data-i18n-html="land.inst4"><strong>Sign in</strong>Open SmartQ and sign in with your email (we send you a code), or browse as a guest.</span></li>
+      </ol>
+      <p class="sq-install-note"><i class="fa-solid fa-shield-halved"></i> <span data-i18n="land.inst_note">Android may warn that the app is not from the Play Store — that is expected for a direct download.</span></p>
+      <div class="sq-modal__actions">
+        <a href="#" class="btn btn-secondary" data-sq-modal-close data-i18n="land.close">Close</a>
+        <a href="https://drive.usercontent.google.com/download?id=15uEVxpWX8XrNO_Pps8ss4AWoXTe64ZWq&amp;export=download&amp;confirm=t" class="btn btn-primary" download><i class="fa-solid fa-download"></i> <span data-i18n="land.download_apk">Download APK</span></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    /* translate (Arabic) before first paint + mark the active language */
+    window.sqI18nApply && window.sqI18nApply();
+    (function () {
+      var l = document.documentElement.getAttribute('lang') === 'ar' ? 'ar' : 'en';
+      document.querySelectorAll('[data-sq-lang]').forEach(function (a) { if (a.getAttribute('data-sq-lang') === l) { a.classList.add('is-active'); a.setAttribute('aria-current', 'true'); } });
+    })();
+  </script>
+</body>
+</html>

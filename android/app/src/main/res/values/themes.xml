@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <style name="Theme.SmartQ" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue_600</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorPrimaryContainer">@color/surface_alt</item>
+        <item name="colorOnPrimaryContainer">@color/ink</item>
+        <item name="colorSecondary">@color/teal_500</item>
+        <item name="colorOnSecondary">@color/white</item>
+        <item name="colorSecondaryContainer">@color/surface_alt</item>
+        <item name="colorOnSecondaryContainer">@color/ink</item>
+        <item name="colorTertiary">@color/gold_400</item>
+        <item name="colorOnTertiary">@color/navy_900</item>
+        <item name="colorPrimaryInverse">@color/sky_300</item>
+        <item name="colorError">@color/danger</item>
+        <item name="android:colorBackground">@color/bg</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceContainer">@color/surface</item>
+        <item name="colorSurfaceContainerLow">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/surface</item>
+        <item name="colorSurfaceContainerHighest">@color/surface_alt</item>
+        <item name="colorOnSurface">@color/text</item>
+        <item name="colorOnSurfaceVariant">@color/muted</item>
+        <item name="colorOutline">@color/border</item>
+        <item name="colorOutlineVariant">@color/border</item>
+        <item name="elevationOverlayEnabled">false</item>
+        <item name="android:textColorPrimary">@color/text</item>
+        <item name="android:textColorSecondary">@color/muted</item>
+        <item name="android:windowBackground">@color/bg</item>
+        <item name="android:windowLightStatusBar">@bool/light_bars</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+
+        <item name="fontFamily">@font/inter</item>
+        <item name="android:fontFamily">@font/inter</item>
+        <item name="textAppearanceDisplaySmall">@style/TextAppearance.SmartQ.Display</item>
+        <item name="textAppearanceHeadlineLarge">@style/TextAppearance.SmartQ.H1</item>
+        <item name="textAppearanceHeadlineMedium">@style/TextAppearance.SmartQ.H2</item>
+        <item name="textAppearanceHeadlineSmall">@style/TextAppearance.SmartQ.H3</item>
+        <item name="textAppearanceTitleLarge">@style/TextAppearance.SmartQ.Title</item>
+        <item name="textAppearanceTitleMedium">@style/TextAppearance.SmartQ.TitleMedium</item>
+        <item name="textAppearanceTitleSmall">@style/TextAppearance.SmartQ.TitleSmall</item>
+        <item name="textAppearanceBodyLarge">@style/TextAppearance.SmartQ.BodyLarge</item>
+        <item name="textAppearanceBodyMedium">@style/TextAppearance.SmartQ.Body</item>
+        <item name="textAppearanceBodySmall">@style/TextAppearance.SmartQ.Caption</item>
+        <item name="textAppearanceLabelLarge">@style/TextAppearance.SmartQ.Button</item>
+        <item name="textAppearanceLabelMedium">@style/TextAppearance.SmartQ.Label</item>
+
+        <item name="shapeAppearanceCornerSmall">@style/Shape.SmartQ.Small</item>
+        <item name="shapeAppearanceCornerMedium">@style/Shape.SmartQ.Input</item>
+        <item name="shapeAppearanceCornerLarge">@style/Shape.SmartQ.Card</item>
+        <item name="shapeAppearanceCornerExtraLarge">@style/Shape.SmartQ.Card</item>
+
+        <item name="materialButtonStyle">@style/Widget.SmartQ.Button</item>
+        <item name="materialCardViewStyle">@style/Widget.SmartQ.Card</item>
+        <item name="textInputStyle">@style/Widget.SmartQ.TextInput</item>
+        <item name="chipStyle">@style/Widget.SmartQ.Chip</item>
+        <item name="bottomNavigationStyle">@style/Widget.SmartQ.BottomNav</item>
+        <item name="materialAlertDialogTheme">@style/ThemeOverlay.SmartQ.Dialog</item>
+        <item name="snackbarStyle">@style/Widget.SmartQ.Snackbar</item>
+        <item name="android:windowAnimationStyle">@style/SmartQ.WindowAnimations</item>
+    </style>
+
+    <!-- Splash: the window background matches the first frame of the animated splash. -->
+    <style name="Theme.SmartQ.Splash" parent="Theme.SmartQ">
+        <item name="android:windowBackground">@drawable/bg_splash_window</item>
+    </style>
+
+    <style name="SmartQ.WindowAnimations" parent="@android:style/Animation.Activity">
+        <item name="android:activityOpenEnterAnimation">@anim/screen_enter</item>
+        <item name="android:activityOpenExitAnimation">@anim/screen_exit</item>
+        <item name="android:activityCloseEnterAnimation">@anim/screen_pop_enter</item>
+        <item name="android:activityCloseExitAnimation">@anim/screen_pop_exit</item>
+    </style>
+
+    <style name="ThemeOverlay.SmartQ.Dialog" parent="ThemeOverlay.Material3.MaterialAlertDialog">
+        <item name="shapeAppearanceOverlay">@style/Shape.SmartQ.Card</item>
+        <item name="colorSurface">@color/surface</item>
+        <item name="colorSurfaceContainerHigh">@color/surface</item>
+        <item name="materialAlertDialogTitleTextStyle">@style/SmartQ.DialogTitle</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.SmartQ.Button.Text</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.SmartQ.Button.Text.Muted</item>
+    </style>
+
+    <style name="SmartQ.DialogTitle" parent="MaterialAlertDialog.Material3.Title.Text">
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+</resources>

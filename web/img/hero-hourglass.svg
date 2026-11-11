@@ -1,0 +1,90 @@
+<svg width="760" height="620" viewBox="0 0 760 620" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(380 322) rotate(90) scale(286 336)">
+      <stop stop-color="#2F7DFF" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#1D6CFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#071D42" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="blue" x1="234" y1="91" x2="526" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#4FA3FF"/>
+      <stop offset="0.48" stop-color="#155EEF"/>
+      <stop offset="1" stop-color="#063F9E"/>
+    </linearGradient>
+    <linearGradient id="blueDark" x1="262" y1="105" x2="493" y2="150" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#77B7FF"/>
+      <stop offset="0.45" stop-color="#1D6CFF"/>
+      <stop offset="1" stop-color="#063A90"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="279" y1="166" x2="483" y2="420" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFFFFF" stop-opacity="0.7"/>
+      <stop offset="0.18" stop-color="#BFE5FF" stop-opacity="0.34"/>
+      <stop offset="0.55" stop-color="#FFFFFF" stop-opacity="0.12"/>
+      <stop offset="1" stop-color="#D8F0FF" stop-opacity="0.55"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="380" y1="172" x2="380" y2="445" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FFD479"/>
+      <stop offset="0.45" stop-color="#F59E0B"/>
+      <stop offset="1" stop-color="#FF8A00"/>
+    </linearGradient>
+    <filter id="shadow" x="174" y="62" width="412" height="478" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="28" stdDeviation="24" flood-color="#020617" flood-opacity="0.42"/>
+      <feDropShadow dx="0" dy="0" stdDeviation="18" flood-color="#2563EB" flood-opacity="0.22"/>
+    </filter>
+    <filter id="softShadow" x="0" y="0" width="760" height="620" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="12" stdDeviation="20" flood-color="#020617" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="760" height="620" fill="url(#glow)"/>
+  <circle cx="380" cy="310" r="244" stroke="#60A5FA" stroke-opacity="0.22" stroke-width="1.4"/>
+  <circle cx="380" cy="310" r="180" stroke="#60A5FA" stroke-opacity="0.13" stroke-width="1.2"/>
+  <path d="M178 310C236 210 313 159 408 161C497 163 571 214 606 300" stroke="#60A5FA" stroke-opacity="0.20" stroke-width="1.5" stroke-dasharray="6 8"/>
+  <path d="M162 386C250 480 348 506 457 467C527 442 583 389 619 307" stroke="#F59E0B" stroke-opacity="0.22" stroke-width="1.4" stroke-dasharray="7 9"/>
+
+  <g filter="url(#shadow)">
+    <ellipse cx="380" cy="500" rx="154" ry="31" fill="#061B3E" fill-opacity="0.32"/>
+    <ellipse cx="380" cy="487" rx="142" ry="31" fill="url(#blue)"/>
+    <ellipse cx="380" cy="477" rx="126" ry="16" fill="#6EB6FF" fill-opacity="0.42"/>
+
+    <path d="M273 143C284 213 337 238 363 300C334 362 285 391 273 467C273 486 487 486 487 467C475 391 426 362 397 300C423 238 476 213 487 143C487 124 273 124 273 143Z" fill="url(#glass)" stroke="#DCEEFF" stroke-opacity="0.72" stroke-width="3"/>
+    <path d="M309 161C322 225 359 249 372 296C350 350 318 378 309 445" stroke="#FFFFFF" stroke-opacity="0.38" stroke-width="7" stroke-linecap="round"/>
+    <path d="M451 162C439 224 402 249 389 296C411 351 443 379 451 445" stroke="#7DD3FC" stroke-opacity="0.18" stroke-width="7" stroke-linecap="round"/>
+
+    <path d="M304 204C329 222 431 222 456 204C445 247 418 267 393 295H367C342 267 315 247 304 204Z" fill="url(#sand)" opacity="0.92"/>
+    <ellipse cx="380" cy="203" rx="77" ry="19" fill="#FFD27A" opacity="0.95"/>
+    <path d="M380 294C380 294 381 358 381 389" stroke="#FFC766" stroke-width="7" stroke-linecap="round"/>
+    <path d="M380 336L452 451H308L380 336Z" fill="url(#sand)"/>
+    <ellipse cx="380" cy="451" rx="78" ry="19" fill="#F59E0B" opacity="0.9"/>
+
+    <ellipse cx="380" cy="132" rx="142" ry="31" fill="url(#blueDark)"/>
+    <ellipse cx="380" cy="121" rx="122" ry="17" fill="#77B7FF" fill-opacity="0.42"/>
+    <ellipse cx="380" cy="135" rx="141" ry="20" fill="#063B96" fill-opacity="0.32"/>
+    <rect x="257" y="127" width="246" height="32" rx="16" fill="#105BE1" opacity="0.46"/>
+  </g>
+
+  <g filter="url(#softShadow)" opacity="0.98">
+    <rect x="70" y="93" width="214" height="74" rx="22" fill="#082653" fill-opacity="0.78" stroke="#60A5FA" stroke-opacity="0.24"/>
+    <circle cx="108" cy="130" r="19" fill="#1D6CFF" fill-opacity="0.42" stroke="#60A5FA" stroke-opacity="0.25"/>
+    <path d="M101 130H115M104 123H112M104 137H112" stroke="white" stroke-width="3" stroke-linecap="round"/>
+    <text x="142" y="124" fill="#F8FBFF" font-family="Plus Jakarta Sans, Arial" font-size="17" font-weight="800">Manage</text>
+    <text x="142" y="146" fill="#D9E9FF" font-family="Plus Jakarta Sans, Arial" font-size="16" font-weight="800">Appointments</text>
+
+    <rect x="52" y="318" width="198" height="70" rx="22" fill="#082653" fill-opacity="0.78" stroke="#60A5FA" stroke-opacity="0.24"/>
+    <circle cx="91" cy="353" r="19" fill="#1D6CFF" fill-opacity="0.42" stroke="#60A5FA" stroke-opacity="0.25"/>
+    <path d="M91 342V354L100 359" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="126" y="349" fill="#F8FBFF" font-family="Plus Jakarta Sans, Arial" font-size="16" font-weight="800">Reduce</text>
+    <text x="126" y="371" fill="#D9E9FF" font-family="Plus Jakarta Sans, Arial" font-size="15" font-weight="800">Wait Time</text>
+
+    <rect x="514" y="318" width="194" height="70" rx="22" fill="#082653" fill-opacity="0.78" stroke="#60A5FA" stroke-opacity="0.24"/>
+    <circle cx="552" cy="353" r="19" fill="#1D6CFF" fill-opacity="0.42" stroke="#60A5FA" stroke-opacity="0.25"/>
+    <path d="M545 350C545 344 553 342 557 347C561 342 569 344 569 350C569 359 557 365 557 365C557 365 545 359 545 350Z" stroke="white" stroke-width="2.6" stroke-linejoin="round"/>
+    <text x="588" y="349" fill="#F8FBFF" font-family="Plus Jakarta Sans, Arial" font-size="16" font-weight="800">Improve</text>
+    <text x="588" y="371" fill="#D9E9FF" font-family="Plus Jakarta Sans, Arial" font-size="15" font-weight="800">Experience</text>
+
+    <rect x="264" y="518" width="232" height="73" rx="22" fill="#082653" fill-opacity="0.78" stroke="#60A5FA" stroke-opacity="0.24"/>
+    <circle cx="304" cy="554" r="19" fill="#1D6CFF" fill-opacity="0.42" stroke="#60A5FA" stroke-opacity="0.25"/>
+    <path d="M296 559C297 553 302 550 308 550C314 550 319 553 320 559M300 545C300 541 303 538 307 538C311 538 314 541 314 545C314 549 311 552 307 552C303 552 300 549 300 545" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+    <text x="340" y="550" fill="#F8FBFF" font-family="Plus Jakarta Sans, Arial" font-size="16" font-weight="800">Live Queue</text>
+    <text x="340" y="572" fill="#D9E9FF" font-family="Plus Jakarta Sans, Arial" font-size="15" font-weight="800">Real-time Updates</text>
+  </g>
+</svg>

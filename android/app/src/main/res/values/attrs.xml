@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TicketView">
+        <attr name="ticketStyle" format="enum">
+            <enum name="brand" value="0" />
+            <enum name="light" value="1" />
+        </attr>
+        <attr name="notchAnchor" format="reference" />
+        <attr name="notchFraction" format="float" />
+    </declare-styleable>
+</resources>

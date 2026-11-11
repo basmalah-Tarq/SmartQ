@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#E3EEFF"/>
+      <stop offset="1" stop-color="#DDF4F1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="500" fill="url(#g)"/>
+  <circle cx="400" cy="210" r="70" fill="#ffffff" opacity="0.75"/>
+  <path d="M400 135c-42 0-76 34-76 76 0 56 76 139 76 139s76-83 76-139c0-42-34-76-76-76zm0 112a36 36 0 1 1 0-72 36 36 0 0 1 0 72z" fill="#1F6FE0" opacity="0.9"/>
+  <text x="400" y="410" text-anchor="middle" font-family="Plus Jakarta Sans, Inter, Arial" font-size="34" font-weight="700" fill="#0B1F45" opacity="0.72">SmartQ Place</text>
+</svg>

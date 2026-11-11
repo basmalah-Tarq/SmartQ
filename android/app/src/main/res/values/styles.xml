@@ -1,0 +1,294 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- ===== Typography: Plus Jakarta Sans for headings, Inter for body/UI ===== -->
+    <style name="TextAppearance.SmartQ.Display" parent="TextAppearance.Material3.DisplaySmall">
+        <item name="fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">36sp</item>
+        <item name="android:letterSpacing">-0.02</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="TextAppearance.SmartQ.H1" parent="TextAppearance.Material3.HeadlineLarge">
+        <item name="fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:fontFamily">@font/jakarta_extrabold</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:letterSpacing">-0.015</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="TextAppearance.SmartQ.H2" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="TextAppearance.SmartQ.H3" parent="TextAppearance.Material3.HeadlineSmall">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/ink</item>
+    </style>
+    <style name="TextAppearance.SmartQ.Title" parent="TextAppearance.Material3.TitleLarge">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.TitleMedium" parent="TextAppearance.Material3.TitleMedium">
+        <item name="fontFamily">@font/jakarta_bold</item>
+        <item name="android:fontFamily">@font/jakarta_bold</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.TitleSmall" parent="TextAppearance.Material3.TitleSmall">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.BodyLarge" parent="TextAppearance.Material3.BodyLarge">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.Body" parent="TextAppearance.Material3.BodyMedium">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.Caption" parent="TextAppearance.Material3.BodySmall">
+        <item name="fontFamily">@font/inter_regular</item>
+        <item name="android:fontFamily">@font/inter_regular</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="TextAppearance.SmartQ.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:letterSpacing">0.01</item>
+    </style>
+    <style name="TextAppearance.SmartQ.Label" parent="TextAppearance.Material3.LabelMedium">
+        <item name="fontFamily">@font/inter_semibold</item>
+        <item name="android:fontFamily">@font/inter_semibold</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!-- Text view styles used in layouts -->
+    <style name="Text.Display" parent="TextAppearance.SmartQ.Display" />
+    <style name="Text.H1" parent="TextAppearance.SmartQ.H1" />
+    <style name="Text.H2" parent="TextAppearance.SmartQ.H2" />
+    <style name="Text.H3" parent="TextAppearance.SmartQ.H3" />
+    <style name="Text.Body" parent="TextAppearance.SmartQ.Body">
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="Text.BodyStrong" parent="TextAppearance.SmartQ.TitleSmall">
+        <item name="android:textColor">@color/text</item>
+    </style>
+    <style name="Text.Muted" parent="TextAppearance.SmartQ.Body">
+        <item name="android:textColor">@color/muted</item>
+    </style>
+    <style name="Text.Caption" parent="TextAppearance.SmartQ.Caption">
+        <item name="android:textColor">@color/muted</item>
+    </style>
+    <style name="Text.Label" parent="TextAppearance.SmartQ.Label">
+        <item name="android:textColor">@color/muted</item>
+        <item name="android:letterSpacing">0.08</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:textSize">11sp</item>
+    </style>
+    <style name="Text.SectionTitle" parent="TextAppearance.SmartQ.H3">
+        <item name="android:textSize">17sp</item>
+    </style>
+    <style name="Text.Stat" parent="TextAppearance.SmartQ.H1">
+        <item name="android:fontFeatureSettings">tnum</item>
+        <item name="android:textSize">26sp</item>
+    </style>
+    <style name="Text.Pill" parent="TextAppearance.SmartQ.Label">
+        <item name="android:textSize">11sp</item>
+        <item name="android:paddingStart">10dp</item>
+        <item name="android:paddingEnd">10dp</item>
+        <item name="android:paddingTop">4dp</item>
+        <item name="android:paddingBottom">4dp</item>
+        <item name="android:background">@drawable/bg_pill</item>
+    </style>
+
+    <!-- ===== Shapes ===== -->
+    <style name="Shape.SmartQ.Small" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">12dp</item>
+    </style>
+    <style name="Shape.SmartQ.Input" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">14dp</item>
+    </style>
+    <style name="Shape.SmartQ.Card" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">20dp</item>
+    </style>
+    <style name="Shape.SmartQ.Pill" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="Shape.SmartQ.Circle" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+    <style name="Shape.SmartQ.Thumb" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- ===== Buttons (pill primary CTA, press-scale motion) ===== -->
+    <style name="Widget.SmartQ.Button" parent="Widget.Material3.Button">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Pill</item>
+        <item name="backgroundTint">@color/btn_primary_bg</item>
+        <item name="android:textColor">@color/btn_primary_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.SmartQ.Button</item>
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+        <item name="iconTint">@color/white</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Small">
+        <item name="android:minHeight">40dp</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Small</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Secondary" parent="Widget.Material3.Button.OutlinedButton">
+        <item name="android:minHeight">@dimen/button_height</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Pill</item>
+        <item name="strokeColor">@color/border</item>
+        <item name="strokeWidth">1.5dp</item>
+        <item name="android:textColor">@color/ink_soft</item>
+        <item name="iconTint">@color/ink_soft</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="android:textAppearance">@style/TextAppearance.SmartQ.Button</item>
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+        <item name="iconGravity">textStart</item>
+        <item name="iconPadding">8dp</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Secondary.Small">
+        <item name="android:minHeight">40dp</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Small</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Danger" parent="Widget.SmartQ.Button.Secondary.Small">
+        <item name="strokeColor">@color/danger_tint</item>
+        <item name="android:textColor">@color/danger</item>
+        <item name="iconTint">@color/danger</item>
+        <item name="backgroundTint">@color/surface</item>
+        <item name="rippleColor">@color/danger_tint</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Text" parent="Widget.Material3.Button.TextButton">
+        <item name="android:textColor">@color/accent</item>
+        <item name="android:textAppearance">@style/TextAppearance.SmartQ.Button</item>
+    </style>
+    <style name="Widget.SmartQ.Button.Text.Muted">
+        <item name="android:textColor">@color/muted</item>
+    </style>
+
+    <!-- ===== Cards ===== -->
+    <style name="Widget.SmartQ.Card" parent="Widget.Material3.CardView.Elevated">
+        <item name="cardBackgroundColor">@color/surface</item>
+        <item name="cardCornerRadius">@dimen/radius_card</item>
+        <item name="cardElevation">3dp</item>
+        <item name="strokeWidth">0dp</item>
+        <item name="android:outlineAmbientShadowColor" tools:targetApi="28">#330B1F45</item>
+        <item name="android:outlineSpotShadowColor" tools:targetApi="28">#550B1F45</item>
+    </style>
+    <style name="Widget.SmartQ.Card.Outlined">
+        <item name="cardElevation">0dp</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="strokeColor">@color/border</item>
+    </style>
+    <style name="Widget.SmartQ.Card.Clickable">
+        <item name="android:stateListAnimator">@animator/press_scale_card</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!-- ===== Inputs ===== -->
+    <style name="Widget.SmartQ.TextInput" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/radius_input</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/radius_input</item>
+        <item name="boxStrokeColor">@color/input_stroke</item>
+        <item name="boxStrokeWidth">1dp</item>
+        <item name="boxStrokeWidthFocused">2dp</item>
+        <item name="boxBackgroundColor">@color/surface</item>
+        <item name="startIconTint">@color/muted</item>
+        <item name="endIconTint">@color/muted</item>
+        <item name="hintTextColor">@color/blue_600</item>
+        <item name="android:textColorHint">@color/muted</item>
+    </style>
+    <style name="Widget.SmartQ.TextInput.Search">
+        <item name="boxCornerRadiusTopStart">28dp</item>
+        <item name="boxCornerRadiusTopEnd">28dp</item>
+        <item name="boxCornerRadiusBottomStart">28dp</item>
+        <item name="boxCornerRadiusBottomEnd">28dp</item>
+        <item name="hintEnabled">false</item>
+        <item name="boxStrokeWidth">0dp</item>
+    </style>
+
+    <!-- ===== Chips ===== -->
+    <style name="Widget.SmartQ.Chip" parent="Widget.Material3.Chip.Filter">
+        <item name="chipBackgroundColor">@color/chip_bg</item>
+        <item name="chipStrokeColor">@color/chip_stroke</item>
+        <item name="chipStrokeWidth">1dp</item>
+        <item name="android:textColor">@color/chip_text</item>
+        <item name="android:textAppearance">@style/TextAppearance.SmartQ.Label</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Pill</item>
+        <item name="checkedIconVisible">false</item>
+        <item name="chipMinHeight">38dp</item>
+        <item name="chipStartPadding">10dp</item>
+        <item name="chipEndPadding">10dp</item>
+        <item name="android:stateListAnimator">@animator/press_scale</item>
+    </style>
+
+    <!-- ===== Bottom navigation ===== -->
+    <style name="Widget.SmartQ.BottomNav" parent="Widget.Material3.BottomNavigationView">
+        <item name="backgroundTint">@color/surface</item>
+        <item name="itemIconTint">@color/nav_item</item>
+        <item name="itemTextColor">@color/nav_item</item>
+        <item name="itemActiveIndicatorStyle">@style/SmartQ.NavIndicator</item>
+        <item name="itemTextAppearanceActive">@style/TextAppearance.SmartQ.Label</item>
+        <item name="itemTextAppearanceInactive">@style/TextAppearance.SmartQ.Label</item>
+        <item name="labelVisibilityMode">labeled</item>
+        <item name="elevation">16dp</item>
+    </style>
+    <style name="SmartQ.NavIndicator" parent="Widget.Material3.BottomNavigationView.ActiveIndicator">
+        <item name="android:color">@color/blue_tint</item>
+    </style>
+
+    <style name="Widget.SmartQ.Snackbar" parent="Widget.Material3.Snackbar">
+        <item name="backgroundTint">@color/snack_bg</item>
+        <item name="shapeAppearance">@style/Shape.SmartQ.Input</item>
+    </style>
+
+    <style name="Widget.SmartQ.Tabs" parent="Widget.Material3.TabLayout">
+        <item name="tabSelectedTextColor">@color/white</item>
+        <item name="tabTextColor">@color/muted</item>
+        <item name="tabIndicator">@drawable/tab_indicator_pill</item>
+        <item name="tabIndicatorColor">@color/blue_600</item>
+        <item name="tabIndicatorGravity">stretch</item>
+        <item name="tabIndicatorFullWidth">true</item>
+        <item name="tabIndicatorAnimationMode">elastic</item>
+        <item name="tabRippleColor">@android:color/transparent</item>
+        <item name="tabTextAppearance">@style/TextAppearance.SmartQ.Button</item>
+        <item name="android:background">@drawable/bg_tabs</item>
+        <item name="tabGravity">fill</item>
+        <item name="tabMode">fixed</item>
+        <item name="android:padding">4dp</item>
+    </style>
+
+    <style name="Widget.SmartQ.Progress" parent="Widget.Material3.LinearProgressIndicator">
+        <item name="trackCornerRadius">4dp</item>
+        <item name="trackThickness">6dp</item>
+        <item name="trackColor">@color/surface_alt</item>
+        <item name="indicatorColor">@color/teal_500</item>
+    </style>
+</resources>

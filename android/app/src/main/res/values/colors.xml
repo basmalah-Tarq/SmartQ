@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- SmartQ design tokens (see SmartQ/DESIGN_SYSTEM.md) -->
+<resources>
+    <color name="navy_900">#0B1F45</color>
+    <color name="navy_700">#12306B</color>
+    <color name="blue_600">#1F6FE0</color>
+    <color name="blue_500">#3B82F6</color>
+    <color name="sky_300">#8EC5FF</color>
+    <color name="teal_500">#14A39A</color>
+    <color name="gold_400">#F5B82E</color>
+    <color name="bg">#F5F8FD</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surface_alt">#EEF4FC</color>
+    <color name="border">#E2E9F4</color>
+    <color name="text">#0B1B36</color>
+    <color name="muted">#5B6B85</color>
+    <color name="success">#16A36B</color>
+    <color name="warning">#F59E0B</color>
+    <color name="danger">#E5484D</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="white_80">#CCFFFFFF</color>
+    <color name="white_60">#99FFFFFF</color>
+    <color name="white_20">#33FFFFFF</color>
+    <color name="white_12">#1FFFFFFF</color>
+    <color name="blue_tint">#1A1F6FE0</color>
+    <color name="teal_tint">#1A14A39A</color>
+    <color name="gold_tint">#1FF5B82E</color>
+    <color name="success_tint">#1A16A36B</color>
+    <color name="warning_tint">#1FF59E0B</color>
+    <color name="danger_tint">#1AE5484D</color>
+    <color name="muted_tint">#1A5B6B85</color>
+    <color name="skeleton">#E6EDF7</color>
+
+    <!-- ===== Semantic tokens (overridden in values-night for dark mode) ===== -->
+    <!-- headings / strong ink: navy in light, near-white in dark -->
+    <color name="ink">#0B1F45</color>
+    <!-- secondary ink for icons and outlined buttons -->
+    <color name="ink_soft">#12306B</color>
+    <!-- links / accents drawn on surfaces (brighter blue in dark) -->
+    <color name="accent">#1F6FE0</color>
+    <color name="chip_checked">#0B1F45</color>
+    <color name="snack_bg">#0B1F45</color>
+    <color name="tip_bg">#FFFDF6E3</color>
+    <color name="skeleton_strong">#DCE6F3</color>
+    <color name="ticket_dash">#D5DFEE</color>
+    <color name="btn_disabled_bg">#B8C9E3</color>
+    <color name="btn_disabled_text">#F2F6FC</color>
+    <color name="glow_blue">#291F6FE0</color>
+    <color name="glow_teal">#2414A39A</color>
+    <color name="placeholder_start">#DCE8FA</color>
+    <color name="placeholder_end">#D3F0EC</color>
+
+    <!-- per-slide onboarding gradients (brand family) -->
+    <color name="slide1_start">#0B1F45</color>
+    <color name="slide1_end">#1F6FE0</color>
+    <color name="slide2_start">#0B4F6C</color>
+    <color name="slide2_end">#14A39A</color>
+    <color name="slide3_start">#12306B</color>
+    <color name="slide3_end">#E39A12</color>
+</resources>

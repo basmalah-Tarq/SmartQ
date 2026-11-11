@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="splash_connecting">جارٍ الاتصال بـ SmartQ…</string>
+    <string name="splash_slow">ما زلنا نتصل، لحظات من فضلك…</string>
+    <string name="splash_server">الخادم: %s</string>
+    <string name="splash_your_number">رقم دورك</string>
+
+    <string name="lang_title">اختر لغتك</string>
+    <string name="lang_subtitle">يمكنك تغييرها في أي وقت من حسابك.</string>
+    <string name="lang_use_phone">استخدم لغة الهاتف</string>
+    <string name="lang_suggested">لغة الهاتف</string>
+
+    <string name="onb_step">%1$s من %2$s</string>
+    <string name="onb_title_1">اعثر على مكان قريب منك</string>
+    <string name="onb_body_1">عيادات وبنوك وصالونات والمزيد. اعرف من يستقبل اليوم.</string>
+    <string name="onb_title_2">اختر وقتك بالضبط</string>
+    <string name="onb_body_2">اختر وقتًا متاحًا يناسبك. بلا اتصالات ولا قوائم انتظار.</string>
+    <string name="onb_title_3">احضر عند دورك تمامًا</string>
+    <string name="onb_body_3">تذكرتك المباشرة تُظهر من يُخدَم الآن، فتصل في الوقت المناسب.</string>
+    <string name="onb_get_started">ابدأ الآن</string>
+    <string name="onb_art_search">ابحث عن عيادة أو بنك…</string>
+    <string name="onb_art_nearby">مفتوح بالقرب منك</string>
+    <string name="onb_art_free">الأوقات المتاحة</string>
+    <string name="onb_art_yours">وقتك: %s</string>
+    <string name="onb_art_your_turn">رقم دورك</string>
+    <string name="onb_art_place">عيادة المدينة</string>
+    <string name="onb_art_now_serving">يُخدَم الآن</string>
+    <string name="onb_art_next">أنت التالي</string>
+    <string name="onb_art_turn_now">جاء دورك!</string>
+    <string name="onb_art_no_wait">بلا غرفة انتظار</string>
+
+    <string name="welcome_title">دورك… بلا انتظار</string>
+    <string name="welcome_subtitle">احجز موعدك في العيادات والبنوك والصالونات، واحضر عندما يحين دورك.</string>
+    <string name="welcome_guest">تصفّح كضيف</string>
+    <string name="welcome_have_password">لديك كلمة مرور؟</string>
+    <string name="welcome_new">جديد على SmartQ؟</string>
+    <string name="welcome_create_account">أنشئ حسابًا</string>
+    <string name="welcome_your_turn">رقم دورك</string>
+    <string name="welcome_now_serving">يُخدَم الآن</string>
+    <string name="welcome_sample_place">عيادة المدينة</string>
+</resources>

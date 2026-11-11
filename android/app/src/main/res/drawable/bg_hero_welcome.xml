@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Welcome hero: brand gradient with rounded bottom corners and soft glows. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:angle="315" android:startColor="@color/navy_900" android:centerColor="@color/blue_600" android:endColor="@color/teal_500" />
+            <corners android:bottomLeftRadius="36dp" android:bottomRightRadius="36dp" />
+        </shape>
+    </item>
+    <item android:gravity="top|end" android:width="260dp" android:height="260dp" android:top="-80dp" android:end="-90dp">
+        <shape android:shape="oval">
+            <gradient android:type="radial" android:gradientRadius="130dp" android:startColor="#4014A39A" android:endColor="#0014A39A" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|start" android:width="220dp" android:height="220dp" android:start="-80dp" android:bottom="-60dp">
+        <shape android:shape="oval">
+            <gradient android:type="radial" android:gradientRadius="110dp" android:startColor="#408EC5FF" android:endColor="#008EC5FF" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Shared strings. Screen-specific strings live in strings_<area>.xml (same in values-ar). -->
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name" translatable="false">SmartQ</string>
+    <string name="brand_name" translatable="false">SmartQ</string>
+    <string name="tagline">Book your turn. Save your time.</string>
+
+    <!-- bottom navigation -->
+    <string name="nav_home">Home</string>
+    <string name="nav_places">Places</string>
+    <string name="nav_bookings">Bookings</string>
+    <string name="nav_profile">Profile</string>
+
+    <!-- common actions -->
+    <string name="action_try_again">Try again</string>
+    <string name="action_back">Back</string>
+    <string name="action_next">Next</string>
+    <string name="action_previous">Previous</string>
+    <string name="action_skip">Skip</string>
+    <string name="action_cancel">Cancel</string>
+    <string name="action_close">Close</string>
+    <string name="action_ok">OK</string>
+    <string name="action_sign_in">Sign in</string>
+    <string name="action_not_now">Not now</string>
+    <string name="action_book_now">Book now</string>
+    <string name="action_save">Save</string>
+
+    <!-- appointment statuses -->
+    <string name="status_waiting">Waiting</string>
+    <string name="status_confirmed">Confirmed</string>
+    <string name="status_done">Done</string>
+    <string name="status_cancelled">Cancelled</string>
+    <string name="status_missed">Missed</string>
+
+    <!-- dates -->
+    <string name="date_today">Today</string>
+    <string name="date_tomorrow">Tomorrow</string>
+    <string name="date_yesterday">Yesterday</string>
+    <string name="greeting_morning">Good morning</string>
+    <string name="greeting_afternoon">Good afternoon</string>
+    <string name="greeting_evening">Good evening</string>
+
+    <!-- countdowns: %s is the number (Western digits) -->
+    <string name="countdown_now">Now</string>
+    <plurals name="countdown_minutes">
+        <item quantity="one">in %s min</item>
+        <item quantity="other">in %s min</item>
+    </plurals>
+    <plurals name="countdown_hours">
+        <item quantity="one">in %s hour</item>
+        <item quantity="other">in %s hours</item>
+    </plurals>
+    <plurals name="countdown_days">
+        <item quantity="one">in %s day</item>
+        <item quantity="other">in %s days</item>
+    </plurals>
+
+    <!-- state panels -->
+    <string name="state_offline_title">You\'re offline</string>
+    <string name="state_unreachable_title">Can\'t reach SmartQ</string>
+    <string name="state_error_title">Something went wrong</string>
+    <string name="state_empty_title">Nothing here yet</string>
+
+    <!-- sign-in plumbing (guest mode) -->
+    <string name="signin_failed">Sign-in failed. Please try again.</string>
+    <string name="signed_in">You\'re signed in.</string>
+    <string name="signed_in_as">Signed in as %s.</string>
+    <string name="gate_bookings_title">Sign in to see your bookings</string>
+    <string name="gate_bookings_message">Your turns and live queue tickets live here once you have an account.</string>
+    <string name="gate_profile_title">Sign in to your profile</string>
+    <string name="gate_profile_message">Keep your details, photo and bookings in one place.</string>
+    <string name="gate_generic_title">Sign in to SmartQ</string>
+    <string name="gate_generic_message">Book turns, follow your live queue ticket and get reminders by email.</string>
+    <string name="gate_book_title">Sign in to book</string>
+    <string name="gate_book_message">It takes a few seconds and we\'ll bring you right back.</string>
+    <string name="continue_with_google">Continue with Google</string>
+    <string name="continue_with_email">Continue with email</string>
+    <string name="sign_in_with_password">Sign in with password</string>
+
+    <!-- language & theme settings -->
+    <string name="settings_language">Language</string>
+    <string name="settings_theme">Appearance</string>
+    <string name="language_system">Phone language</string>
+    <string name="language_english" translatable="false">English</string>
+    <string name="language_arabic" translatable="false">العربية</string>
+    <string name="theme_system">System</string>
+    <string name="theme_light">Light</string>
+    <string name="theme_dark">Dark</string>
+    <string name="cd_change_language">Change language</string>
+    <string name="cd_change_theme">Change appearance</string>
+
+    <!-- notifications -->
+    <string name="reminder_channel">Booking reminders</string>
+    <string name="reminder_channel_desc">Reminders before your SmartQ turn</string>
+    <string name="reminder_default_title">SmartQ reminder</string>
+    <string name="reminder_default_text">You have an upcoming turn.</string>
+
+    <!-- app-side network errors -->
+    <string name="err_sign_in_required">Please sign in to continue.</string>
+    <string name="err_blocked">The server\'s security check blocked the app. Please try again in a moment.</string>
+    <string name="err_blocked_solve">Could not pass the server\'s security check. Check your connection and try again.</string>
+    <string name="err_server">The server had a problem (error %s). Please try again shortly.</string>
+    <string name="err_not_found">The service was not found on the server (404). Please check the server address.</string>
+    <string name="err_parse">The server sent an unexpected response. Please try again.</string>
+    <string name="err_no_internet">No internet connection. Check your Wi-Fi or mobile data and try again.</string>
+    <string name="err_timeout">The server is taking too long to respond. Please try again.</string>
+    <string name="err_ssl">Secure connection to the server failed. Please try again later.</string>
+    <string name="err_unreachable">Server unreachable. Please try again in a moment.</string>
+    <string name="err_unreachable_check">Server unreachable. Please check your connection and try again.</string>
+    <string name="err_server_generic">The server had a problem. Please try again shortly.</string>
+    <string name="err_generic">Something went wrong. Please try again.</string>
+
+    <!-- Google sign-in -->
+    <string name="google_not_setup">Google sign-in isn\'t set up in this version of the app. Please continue with email.</string>
+    <string name="google_no_account">No Google account is available on this phone. Add one in Settings, or continue with email.</string>
+    <string name="google_failed">Google sign-in didn\'t work this time. Please try again or continue with email.</string>
+
+    <!-- server messages (only shown translated in Arabic; English keeps the server text) -->
+    <string name="srv_log_in_again">Please log in again.</string>
+    <string name="srv_session_ended">Your session has ended. Please log in again.</string>
+    <string name="srv_account_not_found">Account not found.</string>
+    <string name="srv_already_cancelled">Appointment already cancelled.</string>
+    <string name="srv_booking_not_found">Booking not found.</string>
+    <string name="srv_booking_failed">Booking failed. Please try again.</string>
+    <string name="srv_cancel_failed">Failed to cancel the booking.</string>
+    <string name="srv_cannot_cancel">This booking can no longer be cancelled.</string>
+    <string name="srv_no_slots">No free time slots left.</string>
+    <string name="srv_schedule_missing">This schedule does not exist.</string>
+    <string name="srv_schedule_ended">This schedule has already ended.</string>
+    <string name="srv_schedule_closed">This schedule is closed.</string>
+    <string name="srv_schedule_full">This schedule is full.</string>
+    <string name="srv_time_not_in_schedule">This time is not part of the schedule.</string>
+    <string name="srv_time_passed">This time has already passed. Please choose another time.</string>
+    <string name="srv_time_taken">This time was just booked by someone else. Please choose another time.</string>
+    <string name="srv_already_booked">You already have a booking in this schedule.</string>
+    <string name="srv_invalid_time">Invalid time format.</string>
+    <string name="srv_wrong_current_password">Current password is incorrect.</string>
+    <string name="srv_password_mismatch">New password and confirm password do not match.</string>
+    <string name="srv_password_short">New password must be at least 6 characters.</string>
+    <string name="srv_fill_passwords">Please fill all password fields.</string>
+    <string name="srv_password_updated">Password updated successfully.</string>
+    <string name="srv_password_failed">Failed to update password.</string>
+    <string name="srv_profile_updated">Profile updated successfully.</string>
+    <string name="srv_profile_failed">Failed to update profile.</string>
+    <string name="srv_name_required">Full name is required.</string>
+    <string name="srv_name_long">Full name is too long.</string>
+    <string name="srv_phone_long">Phone number is too long.</string>
+    <string name="srv_birth_date">Please enter a valid birth date.</string>
+    <string name="srv_invalid_email">Please enter a valid email address.</string>
+    <string name="srv_fill_name_email">Please fill in your name and email.</string>
+    <string name="srv_image_type">Please choose a JPG, PNG or WEBP image.</string>
+    <string name="srv_image_failed">The image could not be uploaded. Please try again.</string>
+    <string name="srv_image_large">The image is too large (max 5 MB).</string>
+    <string name="srv_register_failed">Could not create your account. Please try again.</string>
+    <string name="srv_enter_code">Enter the 6-digit code from your email.</string>
+    <string name="srv_code_expired">This code has expired. Please request a new one.</string>
+    <string name="srv_code_attempts">Too many wrong attempts. Please request a new code.</string>
+    <string name="srv_code_too_many">Too many codes requested. Please try again later.</string>
+    <string name="srv_code_wait">Please wait a minute before requesting a new code.</string>
+    <string name="srv_email_failed">We could not send the email. Please try again in a moment.</string>
+    <string name="srv_email_disabled">Email sign-in is not available right now. Please use your password.</string>
+    <string name="srv_google_failed">Google sign-in failed. Please try again.</string>
+    <string name="srv_google_off">Google sign-in is not configured yet.</string>
+    <string name="srv_google_unverified">Your Google email is not verified.</string>
+    <string name="srv_customers_only">This app is for customers. Managers and admins please use the website.</string>
+    <string name="srv_bad_login">Invalid email or password.</string>
+    <string name="srv_email_exists">This email is already registered.</string>
+</resources>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Onboarding slide 2: flat colored panel, rounded bottom, two quiet geometric discs. -->
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <solid android:color="@color/slide2_start" />
+            <corners android:bottomLeftRadius="40dp" android:bottomRightRadius="40dp" />
+        </shape>
+    </item>
+    <item android:gravity="top|end" android:width="280dp" android:height="280dp" android:top="-90dp" android:end="-100dp">
+        <shape android:shape="oval">
+            <solid android:color="@color/slide2_end" />
+        </shape>
+    </item>
+    <item android:gravity="bottom|start" android:width="150dp" android:height="150dp" android:bottom="48dp" android:start="-60dp">
+        <shape android:shape="oval">
+            <solid android:color="#14FFFFFF" />
+        </shape>
+    </item>
+</layer-list>

@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="tagline">احجز دورك. وفّر وقتك.</string>
+
+    <string name="nav_home">الرئيسية</string>
+    <string name="nav_places">الأماكن</string>
+    <string name="nav_bookings">حجوزاتي</string>
+    <string name="nav_profile">حسابي</string>
+
+    <string name="action_try_again">حاول مرة أخرى</string>
+    <string name="action_back">رجوع</string>
+    <string name="action_next">التالي</string>
+    <string name="action_previous">السابق</string>
+    <string name="action_skip">تخطّي</string>
+    <string name="action_cancel">إلغاء</string>
+    <string name="action_close">إغلاق</string>
+    <string name="action_ok">حسنًا</string>
+    <string name="action_sign_in">تسجيل الدخول</string>
+    <string name="action_not_now">ليس الآن</string>
+    <string name="action_book_now">احجز الآن</string>
+    <string name="action_save">حفظ</string>
+
+    <string name="status_waiting">بالانتظار</string>
+    <string name="status_confirmed">مؤكَّد</string>
+    <string name="status_done">مكتمل</string>
+    <string name="status_cancelled">ملغى</string>
+    <string name="status_missed">فائت</string>
+
+    <string name="date_today">اليوم</string>
+    <string name="date_tomorrow">غدًا</string>
+    <string name="date_yesterday">أمس</string>
+    <string name="greeting_morning">صباح الخير</string>
+    <string name="greeting_afternoon">طاب نهارك</string>
+    <string name="greeting_evening">مساء الخير</string>
+
+    <string name="countdown_now">الآن</string>
+    <plurals name="countdown_minutes">
+        <item quantity="zero">بعد %s دقيقة</item>
+        <item quantity="one">بعد دقيقة</item>
+        <item quantity="two">بعد دقيقتين</item>
+        <item quantity="few">بعد %s دقائق</item>
+        <item quantity="many">بعد %s دقيقة</item>
+        <item quantity="other">بعد %s دقيقة</item>
+    </plurals>
+    <plurals name="countdown_hours">
+        <item quantity="zero">بعد %s ساعة</item>
+        <item quantity="one">بعد ساعة</item>
+        <item quantity="two">بعد ساعتين</item>
+        <item quantity="few">بعد %s ساعات</item>
+        <item quantity="many">بعد %s ساعة</item>
+        <item quantity="other">بعد %s ساعة</item>
+    </plurals>
+    <plurals name="countdown_days">
+        <item quantity="zero">بعد %s يوم</item>
+        <item quantity="one">بعد يوم</item>
+        <item quantity="two">بعد يومين</item>
+        <item quantity="few">بعد %s أيام</item>
+        <item quantity="many">بعد %s يومًا</item>
+        <item quantity="other">بعد %s يوم</item>
+    </plurals>
+
+    <string name="state_offline_title">أنت غير متصل</string>
+    <string name="state_unreachable_title">تعذّر الوصول إلى SmartQ</string>
+    <string name="state_error_title">حدث خطأ</string>
+    <string name="state_empty_title">لا يوجد شيء بعد</string>
+
+    <string name="signin_failed">فشل تسجيل الدخول. حاول مرة أخرى.</string>
+    <string name="signed_in">تم تسجيل دخولك.</string>
+    <string name="signed_in_as">تم تسجيل الدخول باسم %s.</string>
+    <string name="gate_bookings_title">سجّل الدخول لعرض حجوزاتك</string>
+    <string name="gate_bookings_message">أدوارك وتذاكر الدور المباشرة ستظهر هنا بعد إنشاء حسابك.</string>
+    <string name="gate_profile_title">سجّل الدخول إلى حسابك</string>
+    <string name="gate_profile_message">بياناتك وصورتك وحجوزاتك بمكان واحد.</string>
+    <string name="gate_generic_title">سجّل الدخول إلى SmartQ</string>
+    <string name="gate_generic_message">احجز دورك، تابع تذكرتك مباشرةً، واستلم التذكيرات على بريدك.</string>
+    <string name="gate_book_title">سجّل الدخول لتحجز</string>
+    <string name="gate_book_message">تستغرق ثوانيَ فقط، ثم نعيدك إلى حيث كنت.</string>
+    <string name="continue_with_google">المتابعة باستخدام Google</string>
+    <string name="continue_with_email">المتابعة بالبريد الإلكتروني</string>
+    <string name="sign_in_with_password">الدخول بكلمة المرور</string>
+
+    <string name="settings_language">اللغة</string>
+    <string name="settings_theme">المظهر</string>
+    <string name="language_system">لغة الهاتف</string>
+    <string name="theme_system">حسب النظام</string>
+    <string name="theme_light">فاتح</string>
+    <string name="theme_dark">داكن</string>
+    <string name="cd_change_language">تغيير اللغة</string>
+    <string name="cd_change_theme">تغيير المظهر</string>
+
+    <string name="reminder_channel">تذكيرات الحجز</string>
+    <string name="reminder_channel_desc">تذكيرات قبل موعد دورك في SmartQ</string>
+    <string name="reminder_default_title">تذكير من SmartQ</string>
+    <string name="reminder_default_text">لديك دور قريب.</string>
+
+    <string name="err_sign_in_required">سجّل الدخول للمتابعة.</string>
+    <string name="err_blocked">فحص الحماية على الخادم منع التطبيق. حاول بعد لحظات.</string>
+    <string name="err_blocked_solve">لم نتمكن من اجتياز فحص الحماية على الخادم. تأكّد من الاتصال وحاول مرة أخرى.</string>
+    <string name="err_server">حدثت مشكلة في الخادم (خطأ %s). حاول بعد قليل.</string>
+    <string name="err_not_found">الخدمة غير موجودة على الخادم (404). تأكّد من عنوان الخادم.</string>
+    <string name="err_parse">وصل ردّ غير متوقّع من الخادم. حاول مرة أخرى.</string>
+    <string name="err_no_internet">لا يوجد اتصال بالإنترنت. تأكّد من الواي فاي أو بيانات الجوال وحاول مرة أخرى.</string>
+    <string name="err_timeout">الخادم يستغرق وقتًا طويلًا للرد. حاول مرة أخرى.</string>
+    <string name="err_ssl">فشل الاتصال الآمن بالخادم. حاول لاحقًا.</string>
+    <string name="err_unreachable">تعذّر الوصول إلى الخادم. حاول بعد لحظات.</string>
+    <string name="err_unreachable_check">تعذّر الوصول إلى الخادم. تأكّد من اتصالك وحاول مرة أخرى.</string>
+    <string name="err_server_generic">حدثت مشكلة في الخادم. حاول بعد قليل.</string>
+    <string name="err_generic">حدث خطأ. حاول مرة أخرى.</string>
+
+    <string name="google_not_setup">الدخول عبر Google غير مفعّل في هذه النسخة. تابع بالبريد الإلكتروني.</string>
+    <string name="google_no_account">لا يوجد حساب Google على هذا الجهاز. أضف حسابًا من الإعدادات أو تابع بالبريد الإلكتروني.</string>
+    <string name="google_failed">لم ينجح الدخول عبر Google هذه المرة. حاول مرة أخرى أو تابع بالبريد الإلكتروني.</string>
+
+    <string name="srv_log_in_again">سجّل الدخول مرة أخرى.</string>
+    <string name="srv_session_ended">انتهت جلستك. سجّل الدخول مرة أخرى.</string>
+    <string name="srv_account_not_found">الحساب غير موجود.</string>
+    <string name="srv_already_cancelled">هذا الحجز ملغى مسبقًا.</string>
+    <string name="srv_booking_not_found">الحجز غير موجود.</string>
+    <string name="srv_booking_failed">فشل الحجز. حاول مرة أخرى.</string>
+    <string name="srv_cancel_failed">تعذّر إلغاء الحجز.</string>
+    <string name="srv_cannot_cancel">لم يعد بالإمكان إلغاء هذا الحجز.</string>
+    <string name="srv_no_slots">لا توجد أوقات متاحة.</string>
+    <string name="srv_schedule_missing">هذا الجدول غير موجود.</string>
+    <string name="srv_schedule_ended">هذا الجدول انتهى.</string>
+    <string name="srv_schedule_closed">هذا الجدول مغلق.</string>
+    <string name="srv_schedule_full">هذا الجدول ممتلئ.</string>
+    <string name="srv_time_not_in_schedule">هذا الوقت ليس ضمن الجدول.</string>
+    <string name="srv_time_passed">هذا الوقت مضى. اختر وقتًا آخر.</string>
+    <string name="srv_time_taken">حجز شخص آخر هذا الوقت قبلك بلحظات. اختر وقتًا آخر.</string>
+    <string name="srv_already_booked">لديك حجز في نفس الجدول.</string>
+    <string name="srv_invalid_time">صيغة الوقت غير صحيحة.</string>
+    <string name="srv_wrong_current_password">كلمة المرور الحالية غير صحيحة.</string>
+    <string name="srv_password_mismatch">كلمة المرور الجديدة وتأكيدها غير متطابقين.</string>
+    <string name="srv_password_short">كلمة المرور الجديدة يجب أن تكون ٦ أحرف على الأقل.</string>
+    <string name="srv_fill_passwords">املأ جميع حقول كلمة المرور.</string>
+    <string name="srv_password_updated">تم تحديث كلمة المرور.</string>
+    <string name="srv_password_failed">تعذّر تحديث كلمة المرور.</string>
+    <string name="srv_profile_updated">تم تحديث بياناتك.</string>
+    <string name="srv_profile_failed">تعذّر تحديث بياناتك.</string>
+    <string name="srv_name_required">الاسم الكامل مطلوب.</string>
+    <string name="srv_name_long">الاسم طويل جدًا.</string>
+    <string name="srv_phone_long">رقم الهاتف طويل جدًا.</string>
+    <string name="srv_birth_date">أدخل تاريخ ميلاد صحيح.</string>
+    <string name="srv_invalid_email">أدخل بريدًا إلكترونيًا صحيحًا.</string>
+    <string name="srv_fill_name_email">املأ اسمك وبريدك الإلكتروني.</string>
+    <string name="srv_image_type">اختر صورة JPG أو PNG أو WEBP.</string>
+    <string name="srv_image_failed">تعذّر رفع الصورة. حاول مرة أخرى.</string>
+    <string name="srv_image_large">الصورة كبيرة جدًا (الحد الأقصى 5 ميغابايت).</string>
+    <string name="srv_register_failed">تعذّر إنشاء حسابك. حاول مرة أخرى.</string>
+    <string name="srv_enter_code">أدخل الرمز المكوّن من 6 أرقام من بريدك.</string>
+    <string name="srv_code_expired">انتهت صلاحية الرمز. اطلب رمزًا جديدًا.</string>
+    <string name="srv_code_attempts">محاولات خاطئة جدًا. اطلب رمزًا جديدًا.</string>
+    <string name="srv_code_too_many">طلبت رموز جدًا. حاول لاحقًا.</string>
+    <string name="srv_code_wait">انتظر دقيقة قبل طلب رمز جديد.</string>
+    <string name="srv_email_failed">لم نتمكن من إرسال الإيميل. حاول بعد لحظات.</string>
+    <string name="srv_email_disabled">الدخول بالبريد غير متاح حاليًا. استخدم كلمة المرور.</string>
+    <string name="srv_google_failed">فشل الدخول عبر Google. حاول مرة أخرى.</string>
+    <string name="srv_google_off">الدخول عبر Google غير مفعّل بعد.</string>
+    <string name="srv_google_unverified">بريد Google الخاص بك غير مؤكَّد.</string>
+    <string name="srv_customers_only">هذا التطبيق للعملاء. يُرجى من المدراء والمشرفين استخدام الموقع.</string>
+    <string name="srv_bad_login">البريد الإلكتروني أو كلمة المرور غير صحيحة.</string>
+    <string name="srv_email_exists">هذا البريد مسجّل من قبل.</string>
+</resources>

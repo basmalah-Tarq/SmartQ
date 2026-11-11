@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Onboarding 1 "Find a place": search bar, map pin with pulse ring, category tiles. Flat shapes. -->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="300dp"
+    android:layout_gravity="center"
+    android:clipChildren="false"
+    android:importantForAccessibility="noHideDescendants">
+
+    <View
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/splash_ring" />
+
+    <View
+        android:id="@+id/ring"
+        android:layout_width="104dp"
+        android:layout_height="104dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/splash_ring" />
+
+    <FrameLayout
+        android:id="@+id/pin"
+        android:layout_width="84dp"
+        android:layout_height="84dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/bg_white_circle"
+        android:elevation="6dp">
+
+        <ImageView
+            android:layout_width="44dp"
+            android:layout_height="44dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_pin"
+            app:tint="@color/accent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/searchCard"
+        android:layout_width="240dp"
+        android:layout_height="46dp"
+        android:layout_gravity="top|center_horizontal"
+        android:layout_marginTop="4dp"
+        android:background="@drawable/bg_chip_float"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp">
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_search"
+            app:tint="@color/muted" />
+
+        <TextView
+            style="@style/Text.Caption"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="@string/onb_art_search"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/bubble1"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="top|start"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="84dp"
+        android:background="@drawable/bg_skeleton_card"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_clinic"
+            app:tint="@color/accent" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bubble2"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="center_vertical|end"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="14dp"
+        android:background="@drawable/bg_skeleton_card"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_bank"
+            app:tint="@color/teal_500" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/bubble3"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:layout_gravity="bottom|start"
+        android:layout_marginStart="38dp"
+        android:layout_marginBottom="46dp"
+        android:background="@drawable/bg_skeleton_card"
+        android:elevation="4dp">
+
+        <ImageView
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_barber"
+            app:tint="@color/accent" />
+    </FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/nearbyChip"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_gravity="bottom|end"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/bg_chip_float"
+        android:elevation="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="12dp"
+        android:paddingEnd="14dp">
+
+        <View
+            android:id="@+id/liveDot1"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:background="@drawable/onb_dot" />
+
+        <TextView
+            style="@style/Text.BodyStrong"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/onb_art_nearby"
+            android:textSize="13sp" />
+    </LinearLayout>
+</FrameLayout>

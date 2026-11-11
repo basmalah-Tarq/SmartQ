@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Soft sky glow behind illustrations. -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="oval">
+    <gradient android:type="radial" android:gradientRadius="140dp" android:startColor="#3D8EC5FF" android:centerColor="#1A8EC5FF" android:endColor="#008EC5FF" />
+</shape>
